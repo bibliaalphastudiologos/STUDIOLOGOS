@@ -1,35 +1,41 @@
-name: Build and Deploy to Hostinger
+name: Deploy para Hostinger via FTP
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout código
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: apps/web/package-lock.json
 
-      - name: Install dependencies
-        run: cd apps/web && npm install
+      - name: Instalar dependências
+        run: npm ci
+        working-directory: apps/web
 
-      - name: Build
-        run: cd apps/web && npm run build
+      - name: Build da aplicação
+        run: npm run build
+        working-directory: apps/web
 
-      - name: Deploy to deploy branch
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy via FTP para Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: apps/web/dist
-          publish_branch: deploy
-          force_orphan: true
-
-      - name: Trigger Hostinger deployment
-        run: curl -s -X POST https://webhooks.hostinger.com/deploy/025d541b186cb23b8843a8c953abe67c
+          server: ${ { secrets.FTP_HOST } }
+          username: ${{ secrets.FTP_USER }}
+          password: ${ { secrets.FTP_PASS } }
+          port: 21
+          local-dir: ./dist/apps/web/
+          server-dir: /public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
