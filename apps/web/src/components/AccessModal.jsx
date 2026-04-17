@@ -1,87 +1,21 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@/context/AuthContext';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Clock, Ban, LogIn } from 'lucide-react';
+import { X, ExternalLink } from 'lucide-react';
+import { Button } from './ui/button';
 
-export default function AccessModal({ open, onClose }) {
-  const { user, isPending, isBlocked, logout } = useAuth();
-  const navigate = useNavigate();
-
-  function handleLogin() {
-    onClose();
-    navigate('/login');
-  }
-
-  async function handleLogout() {
-    onClose();
-    await logout();
-    navigate('/login');
-  }
-
-  if (!open) return null;
-
-  if (!user) {
-    return (
-      <Dialog open={open} onOpenChange={onClose}>
-        <DialogContent className="max-w-sm">
-          <DialogHeader>
-            <div className="flex justify-center mb-2">
-              <LogIn className="h-10 w-10 text-amber-600" />
-            </div>
-            <DialogTitle className="text-center">Login necessário</DialogTitle>
-            <DialogDescription className="text-center">
-              Você precisa fazer login para acessar este produto.
-            </DialogDescription>
-          </DialogHeader>
-          <DialogFooter className="flex gap-2">
-            <Button variant="outline" onClick={onClose} className="flex-1">Fechar</Button>
-            <Button onClick={handleLogin} className="flex-1 bg-amber-600 hover:bg-amber-700">Fazer Login</Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-    );
-  }
-
-  if (isBlocked) {
-    return (
-      <Dialog open={open} onOpenChange={onClose}>
-        <DialogContent className="max-w-sm">
-          <DialogHeader>
-            <div className="flex justify-center mb-2">
-              <Ban className="h-10 w-10 text-red-500" />
-            </div>
-            <DialogTitle className="text-center">Acesso negado</DialogTitle>
-            <DialogDescription className="text-center">
-              Seu acesso foi bloqueado. Entre em contato com o administrador.
-            </DialogDescription>
-          </DialogHeader>
-          <DialogFooter>
-            <Button variant="outline" onClick={handleLogout} className="w-full">Sair</Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-    );
-  }
-
+export default function AccessModal({ product, onClose }) {
+  if (!product) return null;
   return (
-    <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="max-w-sm">
-        <DialogHeader>
-          <div className="flex justify-center mb-2">
-            <Clock className="h-10 w-10 text-amber-500" />
-          </div>
-          <DialogTitle className="text-center">Aguardando aprovação</DialogTitle>
-          <DialogDescription className="text-center">
-            Sua conta está pendente de aprovação. O administrador irá liberar seu acesso em breve.
-          </DialogDescription>
-        </DialogHeader>
-        <DialogFooter className="flex gap-2">
-          <Button variant="outline" onClick={onClose} className="flex-1">Fechar</Button>
-          <Button variant="outline" onClick={handleLogout} className="flex-1">Sair</Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={onClose}>
+      <div className="bg-gray-900 rounded-2xl border border-gray-700 p-6 max-w-md w-full" onClick={e => e.stopPropagation()}>
+        <div className="flex justify-between items-start mb-4">
+          <h2 className="text-white font-bold text-xl">{product.title}</h2>
+          <button onClick={onClose} className="text-gray-500 hover:text-white"><X size={20} /></button>
+        </div>
+        {product.description && <p className="text-gray-400 text-sm mb-4">{product.description}</p>}
+        {product.price && <p className="text-yellow-400 font-bold text-2xl mb-6">{product.price}</p>}
+        <Button className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold" onClick={() => alert('Em breve: integração com pagamento!')}>
+          Adquirir Agora
+        </Button>
+      </div>
+    </div>
   );
 }

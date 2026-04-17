@@ -1,181 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Sophisticated Light Theme - Warm Off-White base */
-    --background: 40 20% 98%; 
-    --foreground: 20 14% 10%;
-    
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
-    --card-foreground: 20 14% 10%;
-    
+    --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 20 14% 10%;
-    
-    /* Refined Champagne Gold */
-    --primary: 43 60% 55%;
-    --primary-foreground: 0 0% 100%;
-    
-    --secondary: 40 10% 92%;
-    --secondary-foreground: 20 14% 20%;
-    
-    --muted: 40 10% 92%;
-    --muted-foreground: 20 8% 45%;
-    
-    --accent: 43 60% 95%;
-    --accent-foreground: 43 60% 30%;
-    
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    
-    --border: 40 10% 88%;
-    --input: 40 10% 88%;
-    --ring: 43 60% 55%;
-    
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
-
-    /* Elegant Typography Tokens */
-    --font-serif-elegant: 'Playfair Display', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    --font-sans-elegant: 'Outfit', ui-sans-serif, system-ui, -apple-system, sans-serif;
-    --line-height-reading: 1.8;
-    --letter-spacing-reading: 0.01em;
   }
-
   .dark {
-    /* Deep Rich Charcoal/Slate base - Never pure black */
-    --background: 220 10% 8%;
-    --foreground: 40 20% 96%;
-    
-    --card: 220 10% 10%;
-    --card-foreground: 40 20% 96%;
-    
-    --popover: 220 10% 10%;
-    --popover-foreground: 40 20% 96%;
-    
-    /* Muted Elegant Gold for Dark Mode */
-    --primary: 43 50% 60%;
-    --primary-foreground: 220 10% 10%;
-    
-    --secondary: 220 10% 14%;
-    --secondary-foreground: 40 20% 90%;
-    
-    --muted: 220 10% 14%;
-    --muted-foreground: 220 10% 60%;
-    
-    --accent: 43 30% 20%;
-    --accent-foreground: 43 50% 80%;
-    
-    --border: 220 10% 18%;
-    --input: 220 10% 18%;
-    --ring: 43 50% 60%;
-  }
-
-  * {
-    border-color: hsl(var(--border));
-  }
-
-  body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: var(--font-sans-elegant);
-    line-height: var(--line-height-reading);
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  html {
-    scroll-behavior: smooth;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
 
-@layer utilities {
-  .font-playfair {
-    font-family: 'Playfair Display', serif;
+@layer base {
+  * {
+    @apply border-border;
   }
-  
-  .font-lora {
-    font-family: 'Lora', serif;
+  body {
+    @apply bg-background text-foreground;
   }
-  
-  .font-outfit {
-    font-family: 'Outfit', sans-serif;
-  }
+}
 
-  /* Refined Typography Utilities */
-  .text-balance {
-    text-wrap: balance;
-  }
-  
-  .text-reading-elegant {
-    font-family: var(--font-serif-elegant);
-    line-height: var(--line-height-reading);
-    letter-spacing: var(--letter-spacing-reading);
-  }
-
-  /* Premium Gradient Text */
-  .text-gradient-gold {
-    background: linear-gradient(135deg, hsl(43, 70%, 50%), hsl(35, 60%, 40%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .dark .text-gradient-gold {
-    background: linear-gradient(135deg, hsl(43, 80%, 70%), hsl(35, 60%, 55%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Sophisticated Shadows */
-  .shadow-elegant {
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.03);
-  }
-
-  .dark .shadow-elegant {
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
-  }
-
-  .shadow-elegant-hover {
-    box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
-  }
-
-  /* Glassmorphism Effects */
-  .glass-panel {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-  }
-
-  .dark .glass-panel {
-    background: rgba(20, 22, 26, 0.75);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .modal-overlay-glass {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    background-color: rgba(250, 249, 246, 0.6);
-  }
-  
-  .dark .modal-overlay-glass {
-    background-color: rgba(10, 11, 14, 0.8);
-  }
-
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
+html {
+  scroll-behavior: smooth;
 }
