@@ -1,3 +1,2 @@
 User-agent: *
 Allow: /
-Sitemap: https://studiologos.com.br/sitemap.xml
