@@ -1,0 +1,7 @@
+# Protege pasta data/
+    <FilesMatch "\.json$">
+      Order Deny,Allow
+      Deny from all
+    </FilesMatch>
+    php_value session.cookie_httponly 1
+    php_value session.cookie_samesite Strict
