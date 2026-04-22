@@ -31,4 +31,4 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           port: 21
           local-dir: ./dist/apps/web/
-          server-dir: /home/u876483543/domains/studiologos.com.br/public_html/
+          server-dir: /public_html/
