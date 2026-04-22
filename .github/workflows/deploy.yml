@@ -20,7 +20,7 @@ name: Deploy Studio Logos
               FTP_USER: ${{ secrets.FTP_USER }}
               FTP_PASS: ${{ secrets.FTP_PASS }}
             run: |
-              lftp -u "$FTP_USER","$FTP_PASS" ftp://89.116.115.179 <<EOF
+              lftp -u "$FTP_USER","$FTP_PASS" ftp://89.116.115.179 <<'EOF'
               set ftp:ssl-allow false
               set net:timeout 60
               mirror --reverse --delete --verbose --no-perms public/ /public_html/
