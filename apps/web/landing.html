@@ -1,1 +1,529 @@
-NEED_REAL_CONTENT
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblia Alpha -- Plataforma de Estudo Biblico Profundo</title>
+  <meta name="description" content="Estude as Escrituras com profundidade real. Biblia comentada versiculo por versiculo + biblioteca de ebooks teologicos. R$24,90/mes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:rgba(201,168,76,.13);--gold-glow:rgba(201,168,76,.32);
+      --bg:#07090d;--bg2:#0b0e14;--bg3:#10141c;--bg4:#161b26;
+      --glass:rgba(255,255,255,.04);--glass-border:rgba(255,255,255,.07);--gold-border:rgba(201,168,76,.2);
+      --text:#f2ede6;--text2:#9e9488;--text3:#5c5650;--r:18px;--r-sm:10px;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    .container{max-width:1120px;margin:0 auto;padding:0 32px}
+    .gold{color:var(--gold)}
+    .tag{display:inline-flex;align-items:center;gap:8px;background:var(--gold-dim);border:1px solid var(--gold-border);color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:24px}
+    .tag::before{content:"*";font-size:.6rem}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:rgba(7,9,13,.9);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border-bottom:1px solid var(--glass-border)}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:12px;letter-spacing:.01em}
+    .nav-logo-mark{width:32px;height:32px;border:1.5px solid var(--gold);border-radius:7px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .nav-logo-mark::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gold-dim),transparent)}
+    .nav-logo-mark svg{width:16px;height:16px;fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .nav-links{display:flex;align-items:center;gap:32px}
+    .nav-links a{color:var(--text2);text-decoration:none;font-size:.85rem;font-weight:500;transition:color .2s;letter-spacing:.01em}
+    .nav-links a:hover{color:var(--text)}
+    .btn-nav{background:var(--gold);color:#07090d;padding:10px 24px;border-radius:9px;font-weight:700;font-size:.82rem;text-decoration:none;transition:all .2s;letter-spacing:.02em}
+    .btn-nav:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 24px var(--gold-glow)}
+    .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:160px 32px 120px;position:relative;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+    .hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 100% 60% at 50% -5%,rgba(201,168,76,.16) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 8% 85%,rgba(201,168,76,.07) 0%,transparent 55%),radial-gradient(ellipse 40% 40% at 92% 65%,rgba(120,100,220,.06) 0%,transparent 50%)}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.03) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse 85% 85% at 50% 50%,black 0%,transparent 80%)}
+    .hero-floor{position:absolute;bottom:0;left:0;right:0;height:40%;perspective:800px;pointer-events:none;z-index:0}
+    .hero-floor-inner{width:100%;height:100%;background-image:linear-gradient(rgba(201,168,76,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.07) 1px,transparent 1px);background-size:80px 80px;transform:rotateX(75deg);transform-origin:top center;mask-image:linear-gradient(to bottom,transparent 0%,black 40%,transparent 100%)}
+    .orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px)}
+    .orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,76,.12) 0%,transparent 70%);top:-100px;left:50%;transform:translateX(-50%)}
+    .orb-2{width:300px;height:300px;background:radial-gradient(circle,rgba(120,100,220,.08) 0%,transparent 70%);bottom:10%;right:5%}
+    .hero-content{position:relative;z-index:1;max-width:880px}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,7.5vw,5.6rem);font-weight:800;line-height:1.06;letter-spacing:-.025em;margin-bottom:32px}
+    .hero h1 em{font-style:italic;color:var(--gold);text-shadow:0 0 80px var(--gold-glow)}
+    .hero-sub{font-size:clamp(1rem,2vw,1.18rem);color:var(--text2);max-width:540px;margin:0 auto 52px;font-weight:400;line-height:1.75}
+    .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--gold) 0%,#d4af58 100%);color:#07090d;padding:17px 38px;border-radius:12px;font-weight:800;font-size:.98rem;text-decoration:none;transition:all .28s;box-shadow:0 4px 32px var(--gold-glow),0 1px 0 rgba(255,255,255,.15) inset;letter-spacing:.015em}
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 48px var(--gold-glow)}
+    .btn-primary .arrow{transition:transform .25s}
+    .btn-primary:hover .arrow{transform:translateX(4px)}
+    .btn-secondary{display:inline-flex;align-items:center;gap:10px;background:var(--glass);border:1px solid var(--glass-border);color:var(--text);padding:17px 30px;border-radius:12px;font-weight:600;font-size:.93rem;text-decoration:none;transition:all .25s;backdrop-filter:blur(12px)}
+    .btn-secondary:hover{border-color:var(--gold-border);color:var(--gold);transform:translateY(-2px)}
+    .hero-badges{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:64px;padding-top:48px;border-top:1px solid var(--glass-border)}
+    .hero-badge{display:flex;align-items:center;gap:9px;color:var(--text2);font-size:.8rem;font-weight:500}
+    .badge-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold-glow)}
+    section{padding:120px 0}
+    .section-head{text-align:center;margin-bottom:72px}
+    .section-head h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;line-height:1.12;letter-spacing:-.02em;margin-bottom:20px}
+    .section-head p{color:var(--text2);font-size:1.05rem;max-width:500px;margin:0 auto;line-height:1.7}
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-delay-1{transition-delay:.1s}
+    .reveal-delay-2{transition-delay:.2s}
+    .reveal-delay-3{transition-delay:.3s}
+    .reveal-delay-4{transition-delay:.4s}
+    .problem-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .problem-wrap h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.9rem);font-weight:800;line-height:1.14;letter-spacing:-.02em;margin-bottom:28px}
+    .problem-list{list-style:none;display:flex;flex-direction:column;gap:18px;color:var(--text2);font-size:.97rem}
+    .problem-list li{display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:var(--glass);border:1px solid var(--glass-border);border-radius:12px;transition:border-color .3s}
+    .problem-list li:hover{border-color:var(--gold-border)}
+    .problem-list li::before{content:'';width:18px;height:18px;flex-shrink:0;margin-top:2px;border:1.5px solid var(--gold-border);border-radius:4px;background:var(--gold-dim)}
+    .problem-visual{display:flex;align-items:center;justify-content:center;perspective:1200px}
+    .bible-card-3d{width:240px;height:320px;background:linear-gradient(160deg,var(--bg3) 0%,var(--bg4) 100%);border:1px solid var(--gold-border);border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transform:rotateY(-18deg) rotateX(8deg) rotateZ(-2deg);transform-style:preserve-3d;box-shadow:-20px 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.04) inset,4px 4px 24px var(--gold-dim);transition:transform .5s ease;cursor:pointer;position:relative;overflow:hidden}
+    .bible-card-3d::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,76,.08) 0%,transparent 60%)}
+    .bible-card-3d::after{content:'';position:absolute;left:0;top:0;bottom:0;width:8px;background:linear-gradient(to right,rgba(201,168,76,.3),transparent);border-radius:20px 0 0 20px}
+    .bible-card-3d:hover{transform:rotateY(-5deg) rotateX(3deg) rotateZ(0deg)}
+    .bible-card-lines{width:160px;display:flex;flex-direction:column;gap:10px}
+    .bible-line{height:3px;border-radius:2px;background:var(--gold-border)}
+    .bible-line.thick{height:5px;background:linear-gradient(to right,var(--gold),transparent)}
+    .bible-line.short{width:60%}
+    .bible-card-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);text-align:center;letter-spacing:.04em}
+    .bible-card-sub{font-size:.75rem;color:var(--text3);letter-spacing:.06em;text-transform:uppercase}
+    .bible-spine{position:absolute;left:0;top:0;bottom:0;width:10px;background:linear-gradient(to right,rgba(201,168,76,.4),rgba(201,168,76,.1))}
+    .solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:64px}
+    .feature-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--r);padding:36px 30px;transition:all .35s;position:relative;overflow:hidden;transform-style:preserve-3d;transform:perspective(800px) translateZ(0)}
+    .feature-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gold-dim) 0%,transparent 60%);opacity:0;transition:opacity .35s}
+    .feature-card:hover{border-color:var(--gold-border);transform:perspective(800px) translateZ(16px) translateY(-4px);box-shadow:0 24px 60px rgba(0,0,0,.4),0 0 0 1px var(--gold-border)}
+    .feature-card:hover::before{opacity:1}
+    .feature-icon{width:48px;height:48px;border:1px solid var(--gold-border);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;background:var(--gold-dim)}
+    .feature-icon svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .feature-card h3{font-size:1.02rem;font-weight:700;margin-bottom:12px;letter-spacing:-.01em}
+    .feature-card p{color:var(--text2);font-size:.88rem;line-height:1.7}
+    .benefits-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--glass-border);border:1px solid var(--glass-border);border-radius:var(--r);overflow:hidden}
+    .benefit-item{background:var(--bg2);padding:36px 24px;text-align:center;transition:background .3s}
+    .benefit-item:hover{background:var(--bg3)}
+    .benefit-num{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:800;color:var(--gold);letter-spacing:-.02em;line-height:1}
+    .benefit-label{font-size:.78rem;color:var(--text2);margin-top:8px;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+    .experience{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 50%,var(--bg) 100%)}
+    .exp-scene{perspective:1400px;margin:0 auto;max-width:900px}
+    .exp-mockup{background:var(--bg3);border:1px solid var(--glass-border);border-radius:20px;overflow:hidden;box-shadow:0 60px 120px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.04) inset;transform:rotateX(6deg) rotateY(-1deg);transform-style:preserve-3d;transition:transform .6s ease}
+    .exp-scene:hover .exp-mockup{transform:rotateX(0deg) rotateY(0deg)}
+    .exp-bar{display:flex;align-items:center;gap:8px;padding:14px 20px;background:var(--bg4);border-bottom:1px solid var(--glass-border)}
+    .exp-dot{width:10px;height:10px;border-radius:50%}
+    .exp-dot.r{background:#ff5f57}.exp-dot.y{background:#febc2e}.exp-dot.g{background:#28c840}
+    .exp-url{margin-left:16px;font-size:.78rem;color:var(--text3);background:var(--bg2);padding:5px 18px;border-radius:6px;flex:1;max-width:280px;letter-spacing:.01em}
+    .exp-body{display:grid;grid-template-columns:200px 1fr;min-height:340px}
+    .exp-sidebar{background:var(--bg4);border-right:1px solid var(--glass-border);padding:24px 0}
+    .exp-nav-item{padding:12px 24px;font-size:.82rem;color:var(--text3);cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:10px;letter-spacing:.01em}
+    .exp-nav-item::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--text3);flex-shrink:0;transition:all .2s}
+    .exp-nav-item.active{color:var(--text);background:rgba(201,168,76,.06)}
+    .exp-nav-item.active::before{background:var(--gold);width:5px;height:5px;box-shadow:0 0 6px var(--gold-glow)}
+    .exp-nav-item:hover{color:var(--text2)}
+    .exp-main{padding:36px}
+    .exp-verse{font-family:'Playfair Display',serif;font-size:1.08rem;line-height:1.7;color:var(--text);margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--glass-border);font-style:italic}
+    .exp-verse strong{font-style:normal;color:var(--gold);font-size:.85rem;letter-spacing:.04em;font-family:'Inter',sans-serif;font-weight:700;text-transform:uppercase}
+    .exp-comment{font-size:.88rem;color:var(--text2);line-height:1.8}
+    .exp-comment-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+    .exp-comment-label::before{content:'';width:16px;height:1px;background:var(--gold)}
+    .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .testi-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--r);padding:36px 30px;transition:all .35s;transform-style:preserve-3d;transform:perspective(800px) translateZ(0)}
+    .testi-card:hover{border-color:var(--gold-border);transform:perspective(800px) translateZ(12px) translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+    .testi-stars{display:flex;gap:3px;margin-bottom:20px}
+    .testi-star{width:14px;height:14px;background:var(--gold);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+    .testi-text{color:var(--text2);font-size:.9rem;line-height:1.75;margin-bottom:28px;font-style:italic}
+    .testi-author{display:flex;align-items:center;gap:14px}
+    .testi-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dim),var(--bg3));border:1.5px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;color:var(--gold);letter-spacing:.04em;flex-shrink:0}
+    .testi-name{font-size:.88rem;font-weight:700;color:var(--text)}
+    .testi-role{font-size:.77rem;color:var(--text3);margin-top:2px}
+    .pricing{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
+    .pricing-card{max-width:500px;margin:0 auto;background:var(--bg3);border:1px solid var(--gold-border);border-radius:24px;padding:56px 52px;text-align:center;position:relative;box-shadow:0 40px 100px rgba(0,0,0,.5),0 0 80px rgba(201,168,76,.06);transform-style:preserve-3d}
+    .pricing-card::before{content:'';position:absolute;inset:-1px;border-radius:24px;background:linear-gradient(135deg,rgba(201,168,76,.18) 0%,transparent 50%,rgba(201,168,76,.06) 100%);z-index:-1}
+    .pricing-badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold),#d4af58);color:#07090d;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 20px;border-radius:100px}
+    .pricing-plan{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);margin-bottom:28px}
+    .price-row{display:flex;align-items:flex-start;justify-content:center;gap:4px;margin-bottom:8px}
+    .price-currency{font-size:1.6rem;font-weight:800;color:var(--text2);padding-top:18px}
+    .price-amount{font-family:'Playfair Display',serif;font-size:6rem;font-weight:800;color:var(--text);line-height:1;letter-spacing:-.04em}
+    .price-cents{display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:12px}
+    .price-cents span:first-child{font-size:1.8rem;font-weight:800;color:var(--text)}
+    .price-period{font-size:.8rem;color:var(--text3);font-weight:500;letter-spacing:.04em;margin-top:2px}
+    .price-note{font-size:.8rem;color:var(--text3);margin-bottom:36px}
+    .pricing-divider{height:1px;background:var(--glass-border);margin:0 0 36px}
+    .pricing-features{list-style:none;display:flex;flex-direction:column;gap:14px;text-align:left;margin-bottom:44px}
+    .pricing-features li{display:flex;align-items:center;gap:14px;font-size:.9rem;color:var(--text2)}
+    .pricing-features li::before{content:'';width:18px;height:18px;flex-shrink:0;border-radius:50%;background:var(--gold-dim);border:1px solid var(--gold-border);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9a84c' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");background-size:11px;background-repeat:no-repeat;background-position:center}
+    .btn-pricing{display:block;background:linear-gradient(135deg,var(--gold) 0%,#d4af58 100%);color:#07090d;padding:18px 32px;border-radius:12px;font-weight:800;font-size:1rem;text-decoration:none;transition:all .28s;box-shadow:0 4px 32px var(--gold-glow);letter-spacing:.02em;margin-bottom:20px}
+    .btn-pricing:hover{transform:translateY(-3px);box-shadow:0 12px 48px var(--gold-glow)}
+    .pricing-guarantee{font-size:.78rem;color:var(--text3);display:flex;align-items:center;justify-content:center;gap:8px}
+    .faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+    .faq-item{background:var(--bg2);border:1px solid var(--glass-border);border-radius:14px;overflow:hidden;transition:border-color .3s}
+    .faq-item.open{border-color:var(--gold-border)}
+    .faq-q{padding:22px 28px;font-size:.97rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;transition:color .2s;letter-spacing:-.01em}
+    .faq-q:hover{color:var(--gold)}
+    .faq-icon{width:26px;height:26px;border:1px solid var(--glass-border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;transition:all .3s;color:var(--text3)}
+    .faq-item.open .faq-icon{transform:rotate(45deg);border-color:var(--gold-border);color:var(--gold)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
+    .faq-item.open .faq-a{max-height:200px}
+    .faq-a p{padding:0 28px 24px;color:var(--text2);font-size:.9rem;line-height:1.75}
+    .cta-final{padding:160px 32px;text-align:center;position:relative;overflow:hidden}
+    .cta-final-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(201,168,76,.1) 0%,transparent 65%);pointer-events:none}
+    .cta-ring{position:absolute;width:600px;height:600px;border-radius:50%;border:1px solid rgba(201,168,76,.08);top:50%;left:50%;transform:translate(-50%,-50%);animation:ringPulse 6s ease-in-out infinite}
+    .cta-ring-2{width:900px;height:900px;border-color:rgba(201,168,76,.04);animation-delay:-3s}
+    @keyframes ringPulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:1}50%{transform:translate(-50%,-50%) scale(1.05);opacity:.5}}
+    .cta-final-inner{position:relative;z-index:1;max-width:620px;margin:0 auto}
+    .cta-final h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:800;line-height:1.08;letter-spacing:-.025em;margin-bottom:24px}
+    .cta-final p{color:var(--text2);font-size:1.05rem;line-height:1.75;margin-bottom:48px;max-width:480px;margin-left:auto;margin-right:auto}
+    .social-row{display:flex;justify-content:center;gap:16px;margin-top:36px}
+    .social-link{display:inline-flex;align-items:center;gap:8px;color:var(--text3);font-size:.82rem;font-weight:500;text-decoration:none;padding:10px 20px;border:1px solid var(--glass-border);border-radius:100px;transition:all .25s;letter-spacing:.02em}
+    .social-link:hover{color:var(--gold);border-color:var(--gold-border)}
+    .social-link svg{width:14px;height:14px;fill:currentColor}
+    footer{padding:48px 32px;border-top:1px solid var(--glass-border);text-align:center}
+    footer p{color:var(--text3);font-size:.82rem}
+    footer a{color:var(--text3);text-decoration:none;transition:color .2s}
+    footer a:hover{color:var(--gold)}
+    @media(max-width:900px){
+      nav{padding:16px 24px}
+      .nav-links{display:none}
+      .solution-grid{grid-template-columns:repeat(2,1fr)}
+      .testimonials-grid{grid-template-columns:1fr}
+      .problem-wrap{grid-template-columns:1fr;gap:48px}
+      .problem-visual{display:none}
+      .benefits-strip{grid-template-columns:repeat(2,1fr)}
+      .exp-body{grid-template-columns:1fr}
+      .exp-sidebar{display:none}
+      .pricing-card{padding:44px 32px}
+    }
+    @media(max-width:600px){
+      .container{padding:0 20px}
+      section{padding:80px 0}
+      .solution-grid{grid-template-columns:1fr}
+      .hero{padding:120px 20px 80px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    </div>
+    Biblia Alpha
+  </a>
+  <div class="nav-links">
+    <a href="#beneficios">Recursos</a>
+    <a href="#experiencia">Plataforma</a>
+    <a href="#oferta">Preco</a>
+  </div>
+  <a href="https://bibliaalpha.org/app" class="btn-nav">Assinar agora</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-floor"><div class="hero-floor-inner"></div></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+  <div class="hero-content reveal">
+    <div class="tag">Plataforma de Estudo Biblico</div>
+    <h1>Isso nao e so<br>uma Biblia.<br>E um novo nivel de<br><em>entendimento.</em></h1>
+    <p class="hero-sub">Biblia completa comentada versiculo por versiculo, biblioteca teologica e ferramentas de estudo &mdash; em uma plataforma construida para quem leva as Escrituras a serio.</p>
+    <div class="hero-actions">
+      <a href="https://bibliaalpha.org/app" class="btn-primary">Comecar por R$24,90/mes <span class="arrow">&#8594;</span></a>
+      <a href="#beneficios" class="btn-secondary">Ver recursos</a>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge"><span class="badge-dot"></span> 66 livros da Biblia</div>
+      <div class="hero-badge"><span class="badge-dot"></span> 31.000+ versiculos comentados</div>
+      <div class="hero-badge"><span class="badge-dot"></span> 100+ eBooks teologicos</div>
+      <div class="hero-badge"><span class="badge-dot"></span> Cancele quando quiser</div>
+    </div>
+  </div>
+</section>
+
+<section id="problema">
+  <div class="container">
+    <div class="problem-wrap">
+      <div class="reveal">
+        <div class="tag">O problema</div>
+        <h2>Estudar a Biblia com profundidade e mais dificil do que deveria ser.</h2>
+        <ul class="problem-list">
+          <li>Le a Biblia, mas nao consegue compreender o contexto historico e cultural dos textos</li>
+          <li>Ferramentas de estudo espalhadas em dezenas de sites e aplicativos diferentes</li>
+          <li>Comentarios rasos que nao respondem perguntas de verdade sobre o texto</li>
+          <li>Biblioteca teologica inacessivel &mdash; cara, desorganizada ou dificil de encontrar</li>
+          <li>Nao sabe por onde comecar uma pesquisa teologica seria</li>
+        </ul>
+      </div>
+      <div class="problem-visual reveal reveal-delay-2">
+        <div class="bible-card-3d" id="bibleCard">
+          <div class="bible-spine"></div>
+          <div class="bible-card-lines">
+            <div class="bible-line thick"></div>
+            <div class="bible-line"></div>
+            <div class="bible-line short"></div>
+            <div class="bible-line"></div>
+            <div class="bible-line thick"></div>
+            <div class="bible-line short"></div>
+            <div class="bible-line"></div>
+          </div>
+          <div class="bible-card-title">Biblia Alpha</div>
+          <div class="bible-card-sub">Estudo Profundo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="beneficios">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="tag">A solucao</div>
+      <h2>Tudo que voce precisa para<br>estudar com profundidade</h2>
+      <p>Uma plataforma construida para quem leva as Escrituras a serio.</p>
+    </div>
+    <div class="solution-grid">
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <h3>Biblia Completa</h3>
+        <p>Acesso a Biblia integral com navegacao fluida por livro, capitulo e versiculo. Interface limpa, sem distracoes.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Comentarios Versiculo a Versiculo</h3>
+        <p>Cada versiculo acompanhado de comentario teologico de profundidade real &mdash; contexto historico, linguistico e espiritual.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-3">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3>Biblioteca de eBooks</h3>
+        <p>Obras teologicas classicas e contemporaneas acessiveis dentro da plataforma. Teologia reformada, patristica e mais.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-4">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>Ferramentas de Pesquisa</h3>
+        <p>Busca avancada, conexoes tematicas e ferramentas integradas para explorar as Escrituras como nunca antes.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </div>
+        <h3>Leitura Noturna</h3>
+        <p>Temas claro, escuro e grafite para estudar a qualquer hora sem cansar os olhos. Experiencia personalizada.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>Acesso Instantaneo</h3>
+        <p>Plataforma web &mdash; sem download, sem instalacao. Acesse de qualquer dispositivo, a qualquer momento.</p>
+      </div>
+    </div>
+    <div class="benefits-strip reveal">
+      <div class="benefit-item"><div class="benefit-num">66</div><div class="benefit-label">Livros da Biblia</div></div>
+      <div class="benefit-item"><div class="benefit-num">31K+</div><div class="benefit-label">Versiculos comentados</div></div>
+      <div class="benefit-item"><div class="benefit-num">100+</div><div class="benefit-label">eBooks teologicos</div></div>
+      <div class="benefit-item"><div class="benefit-num">24/7</div><div class="benefit-label">Acesso ilimitado</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="experience" id="experiencia">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="tag">A plataforma</div>
+      <h2>Pensada para o estudo serio</h2>
+      <p>Interface limpa, sem ruido. Tudo no lugar certo, quando voce precisa.</p>
+    </div>
+    <div class="exp-scene reveal">
+      <div class="exp-mockup">
+        <div class="exp-bar">
+          <div class="exp-dot r"></div><div class="exp-dot y"></div><div class="exp-dot g"></div>
+          <div class="exp-url">bibliaalpha.org/app</div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-sidebar">
+            <div class="exp-nav-item active">Joao 3</div>
+            <div class="exp-nav-item">Comentarios</div>
+            <div class="exp-nav-item">eBooks</div>
+            <div class="exp-nav-item">Pesquisa</div>
+            <div class="exp-nav-item">Notas</div>
+            <div class="exp-nav-item">Planos</div>
+          </div>
+          <div class="exp-main">
+            <div class="exp-verse">
+              <strong>Joao 3:16</strong><br><br>&ldquo;Porque Deus amou o mundo de tal maneira que deu o seu Filho unigenito, para que todo aquele que nele cre nao pereca, mas tenha a vida eterna.&rdquo;
+            </div>
+            <div class="exp-comment">
+              <div class="exp-comment-label">Comentario Teologico</div>
+              O termo grego <em>egapesen</em> expressa amor incondicional de escolha deliberada. O contexto com Nicodemos revela que a salvacao nao e fruto de esforco humano, mas de iniciativa divina &mdash; a encarnacao como ato supremo de graca e revelacao do carater de Deus...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="tag">Depoimentos</div>
+      <h2>Quem ja estuda<br>na plataforma</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars"><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div></div>
+        <p class="testi-text">&ldquo;Finalmente encontrei uma ferramenta que une a Palavra com profundidade teologica real. Os comentarios me ajudam a entender o que eu lia ha anos sem compreender de verdade.&rdquo;</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MR</div>
+          <div><div class="testi-name">Marcos Ribeiro</div><div class="testi-role">Lider de celula, Sao Paulo</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars"><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div></div>
+        <p class="testi-text">&ldquo;A biblioteca de eBooks por si so ja vale o valor da assinatura. Encontrei obras que nunca encontraria reunidas em outro lugar assim. Uso todos os dias.&rdquo;</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AC</div>
+          <div><div class="testi-name">Ana Carvalho</div><div class="testi-role">Professora de EBD, Campinas</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-3">
+        <div class="testi-stars"><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div></div>
+        <p class="testi-text">&ldquo;A melhor decisao que tomei para minha vida crista esse ano. A interface e linda, o conteudo e serio. Claramente feito por quem ama as Escrituras de verdade.&rdquo;</p>
+        <div class="testi-author">
+          <div class="testi-avatar">PT</div>
+          <div><div class="testi-name">Paulo Teixeira</div><div class="testi-role">Seminarista, Curitiba</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="oferta">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="tag">Investimento</div>
+      <h2>Um preco justo para um<br>estudo sem limites</h2>
+      <p>Menos que um cafe por semana. Acesso ilimitado a tudo.</p>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-badge">Mais popular</div>
+      <div class="pricing-plan">Plano Completo</div>
+      <div class="price-row">
+        <div class="price-currency">R$</div>
+        <div class="price-amount">24</div>
+        <div class="price-cents"><span>,90</span><span class="price-period">/mes</span></div>
+      </div>
+      <div class="price-note">Cobranca mensal recorrente &middot; Cancele quando quiser</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li>Biblia completa com navegacao avancada</li>
+        <li>Comentarios versiculo por versiculo</li>
+        <li>Biblioteca com 100+ eBooks teologicos</li>
+        <li>Ferramentas de pesquisa e estudo</li>
+        <li>Temas personalizaveis (claro, escuro, grafite)</li>
+        <li>Acesso em qualquer dispositivo, 24/7</li>
+        <li>Novos recursos e conteudos todo mes</li>
+      </ul>
+      <a href="https://bibliaalpha.org/app" class="btn-pricing">Comecar agora &mdash; R$24,90/mes</a>
+      <p class="pricing-guarantee">Pagamento seguro &middot; Cancele a qualquer momento</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="tag">Duvidas frequentes</div>
+      <h2>Antes de assinar,<br>voce precisa saber</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">Preciso instalar algo? <span class="faq-icon">+</span></div>
+        <div class="faq-a"><p>Nao. A Biblia Alpha e uma plataforma web &mdash; voce acessa pelo navegador em qualquer dispositivo: computador, celular ou tablet. Sem download, sem instalacao.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-1">
+        <div class="faq-q" onclick="toggleFaq(this)">Posso cancelar quando quiser? <span class="faq-icon">+</span></div>
+        <div class="faq-a"><p>Sim. Nao existe fidelidade ou multa. Voce cancela a qualquer momento e o acesso continua ate o final do periodo pago.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-2">
+        <div class="faq-q" onclick="toggleFaq(this)">Qual traducao da Biblia esta disponivel? <span class="faq-icon">+</span></div>
+        <div class="faq-a"><p>A plataforma oferece acesso a Biblia em portugues com navegacao completa por todos os 66 livros, capitulos e versiculos.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-3">
+        <div class="faq-q" onclick="toggleFaq(this)">Os comentarios sao de qual tradicao teologica? <span class="faq-icon">+</span></div>
+        <div class="faq-a"><p>Os comentarios sao baseados em teologia historica e reformada, com rigor exegetico e foco no sentido original dos textos biblicos.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-4">
+        <div class="faq-q" onclick="toggleFaq(this)">Tenho duvidas antes de assinar. Como entro em contato? <span class="faq-icon">+</span></div>
+        <div class="faq-a"><p>Fale conosco pelo WhatsApp ou Instagram. Respondemos com agilidade e ficamos felizes em ajudar.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="cta-final-bg"></div>
+  <div class="cta-ring"></div>
+  <div class="cta-ring cta-ring-2"></div>
+  <div class="cta-final-inner reveal">
+    <div class="tag" style="margin:0 auto 24px;display:inline-flex">Comece hoje</div>
+    <h2>Sua jornada nas<br>Escrituras comeca<br><em class="gold">agora.</em></h2>
+    <p>Junte-se a quem decidiu levar o estudo biblico a serio. Por menos de um cafe por semana, tenha acesso a tudo.</p>
+    <div class="hero-actions">
+      <a href="https://bibliaalpha.org/app" class="btn-primary">Assinar por R$24,90/mes <span class="arrow">&#8594;</span></a>
+    </div>
+    <div class="social-row">
+      <a href="https://wa.me/5519993586153" target="_blank" class="social-link">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://www.instagram.com/bibliaalphaorg" target="_blank" class="social-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p style="margin-bottom:10px">
+    <a href="https://studiologos.com.br">studiologos.com.br</a> &nbsp;&middot;&nbsp;
+    <a href="https://wa.me/5519993586153">WhatsApp</a> &nbsp;&middot;&nbsp;
+    <a href="https://www.instagram.com/bibliaalphaorg">Instagram</a>
+  </p>
+  <p>&copy; 2025 Biblia Alpha &middot; Todos os direitos reservados</p>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => observer.observe(el));
+
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  document.addEventListener('mousemove', e => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 24;
+    const y = (e.clientY / window.innerHeight - 0.5) * 24;
+    const orb1 = document.querySelector('.orb-1');
+    const orb2 = document.querySelector('.orb-2');
+    if (orb1) orb1.style.transform = 'translateX(calc(-50% + ' + (x * 0.3) + 'px)) translateY(' + (y * 0.3) + 'px)';
+    if (orb2) orb2.style.transform = 'translateX(' + (x * 0.7) + 'px) translateY(' + (y * 0.7) + 'px)';
+    const card = document.getElementById('bibleCard');
+    if (card) {
+      const rx = -y * 0.25;
+      const ry = x * 0.25 - 18;
+      card.style.transform = 'rotateY(' + ry + 'deg) rotateX(' + rx + 'deg) rotateZ(-2deg)';
+    }
+  });
+</script>
+</body>
+</html>
