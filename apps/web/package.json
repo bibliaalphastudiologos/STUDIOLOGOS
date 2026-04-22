@@ -1,21 +1,14 @@
-{
-  "name": "studiologos-web",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "mkdir -p ../../dist/apps/web && cp landing.html ../../dist/apps/web/index.html && echo 'Landing page copiada para dist/apps/web/index.html'",
-    "preview": "vite preview",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
-  },
-  "dependencies": {
-    "firebase": "^10.12.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.1"
-  },
-  "devDependencies": {
-    "vite": "^5.3.1"
-  }
-}
+ewogICJuYW1lIjogInN0dWRpb2xvZ29zLXdlYiIsCiAgInByaXZhdGUiOiB0
+cnVlLAogICJ2ZXJzaW9uIjogIjEuMC4wIiwKICAidHlwZSI6ICJtb2R1bGUi
+LAogICJzY3JpcHRzIjogewogICAgImRldiI6ICJ2aXRlIiwKICAgICJidWls
+ZCI6ICJ2aXRlIGJ1aWxkIiwKICAgICJwcmV2aWV3IjogInZpdGUgcHJldmll
+dyIsCiAgICAibGludCI6ICJlc2xpbnQgLiAtLWV4dCBqcyxqc3ggLS1yZXBv
+cnQtdW51c2VkLWRpc2FibGUtZGlyZWN0aXZlcyAtLW1heC13YXJuaW5ncyAw
+IgogIH0sCiAgImRlcGVuZGVuY2llcyI6IHsKICAgICJmaXJlYmFzZSI6ICJe
+MTAuMTIuMCIsCiAgICAicmVhY3QiOiAiXjE4LjMuMSIsCiAgICAicmVhY3Qt
+ZG9tIjogIl4xOC4zLjEiLAogICAgInJlYWN0LXJvdXRlci1kb20iOiAiXjYu
+MjMuMSIKICB9LAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAiQHZpdGVq
+cy9wbHVnaW4tcmVhY3QiOiAiXjQuMy4xIiwKICAgICJhdXRvcHJlZml4ZXIi
+OiAiXjEwLjQuMCIsCiAgICAicG9zdGNzcyI6ICJeOC40LjAiLAogICAgInRh
+aWx3aW5kY3NzIjogIl4zLjQuMCIsCiAgICAidml0ZSI6ICJeNS4zLjEiCiAg
+fQp9Cg==
