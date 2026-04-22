@@ -1,46 +1,29 @@
 name: Deploy Studio Logos
 
-on:
-  push:
-    branches:
-      - main
+    on:
+      push:
+        branches:
+          - main
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v4
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+          - name: Install lftp
+            run: sudo apt-get install -y lftp
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm install --prefix apps/web
-
-      - name: Build
-        run: npm run build --prefix apps/web
-
-      - name: Wrap index.html as index.php (bypass LiteSpeed static cache)
-        run: |
-          cp dist/apps/web/index.html dist/apps/web/index.php
-          echo "" > dist/apps/web/index.html
-
-      - name: Install lftp
-        run: sudo apt-get install -y lftp
-
-      - name: Deploy via lftp
-        env:
-          FTP_HOST: 89.116.115.179
-          FTP_USER: ${{ secrets.FTP_USER }}
-          FTP_PASS: ${{ secrets.FTP_PASS }}
-        run: |
-          lftp -u "$FTP_USER","$FTP_PASS" ftp://$FTP_HOST <<EOF
-          set ftp:ssl-allow false
-          set net:timeout 60
-          mirror --reverse --delete --verbose --no-perms dist/apps/web/ /public_html/
-          bye
-          EOF
+          - name: Deploy via lftp
+            env:
+              FTP_USER: ${{ secrets.FTP_USER }}
+              FTP_PASS: ${{ secrets.FTP_PASS }}
+            run: |
+              lftp -u "$FTP_USER","$FTP_PASS" ftp://89.116.115.179 <<EOF
+              set ftp:ssl-allow false
+              set net:timeout 60
+              mirror --reverse --delete --verbose --no-perms public/ /public_html/
+              bye
+              EOF
+    
