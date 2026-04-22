@@ -15,8 +15,14 @@ jobs:
       - name: Install lftp
         run: sudo apt-get install -y lftp
 
-      - name: Deploy via lftp
+      - name: List FTP structure
         env:
           FTP_USER: ${{ secrets.FTP_USER }}
           FTP_PASS: ${{ secrets.FTP_PASS }}
-        run: lftp -u "$FTP_USER","$FTP_PASS" -e "set ftp:ssl-allow false; set net:timeout 60; mirror --reverse --verbose --no-perms public/ /public_html/; bye" ftp://89.116.115.179
+        run: lftp -u "$FTP_USER","$FTP_PASS" -e "set ftp:ssl-allow false; set net:timeout 60; ls /; echo '---domains---'; ls /domains/; bye" ftp://89.116.115.179
+
+      - name: Deploy via lftp to studiologos domain
+        env:
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+        run: lftp -u "$FTP_USER","$FTP_PASS" -e "set ftp:ssl-allow false; set net:timeout 60; mirror --reverse --verbose --no-perms public/ /domains/studiologos.com.br/public_html/; bye" ftp://89.116.115.179
