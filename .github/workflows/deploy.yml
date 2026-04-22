@@ -32,4 +32,4 @@ jobs:
           force_orphan: true
 
       - name: Trigger Hostinger deployment
-        run: curl -s -X POHT https://webhooks.hostinger.com/deploy/025d541b186cb23b8843a8c953abe67c
+        run: curl -s -X POST https://webhooks.hostinger.com/deploy/025d541b186cb23b8843a8c953abe67c
