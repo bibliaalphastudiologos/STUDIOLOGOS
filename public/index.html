@@ -38,6 +38,8 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
     }
 
     /* ─────────────────────────────────────────
@@ -607,15 +609,135 @@
       .solution-grid { grid-template-columns: 1fr; gap: 40px; }
       .diff-strip { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 600px) {
-      .diff-strip { grid-template-columns: 1fr; }
-      .hero-stats { flex-direction: column; }
-      .hero-stat { border-right: none; border-bottom: 1px solid var(--border); }
+    /* ═══════════════════════════════════════════
+       MOBILE — ≤ 768 px
+    ═══════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      /* Nav */
+      .nav-inner { padding: 0 18px; }
+      .nav-cta   { padding: 9px 16px; font-size: 12px; }
+
+      /* Hero */
+      .hero { padding: 88px 20px 60px; min-height: auto; }
+      .hero h1 { font-size: clamp(30px, 9vw, 46px); }
+      .hero-sub { font-size: 15px; max-width: 100%; margin-bottom: 32px; }
+      .hero-price { margin-bottom: 28px; }
+      .hero-actions {
+        flex-direction: column; align-items: stretch;
+        gap: 12px; margin-bottom: 44px;
+      }
+      .btn-primary, .btn-ghost {
+        width: 100%; text-align: center;
+        padding: 16px 20px; font-size: 15px;
+        box-sizing: border-box;
+      }
+      .cta-trust { gap: 10px; }
+      .cta-trust-item { font-size: 12px; }
+
+      /* Hero stats */
+      .hero-stats  { flex-direction: column; max-width: 100%; }
+      .hero-stat   { border-right: none; border-bottom: 1px solid var(--border); padding: 16px 20px; }
       .hero-stat:last-child { border-bottom: none; }
-      .footer-inner { flex-direction: column; text-align: center; }
+
+      /* Sections — uniform padding reduction */
+      .section         { padding: 60px 20px; }
+      .proof-section   { padding: 60px 20px; }
+      .authority-section { padding: 60px 20px; }
+      .faq-section     { padding: 60px 20px; }
+      .ws-section      { padding: 52px 20px; }
+      .cta-final       { padding: 80px 20px; }
+
+      /* Section titles */
+      .section-title { font-size: clamp(24px, 6.5vw, 38px); }
+
+      /* Solution grid */
+      .solution-grid { grid-template-columns: 1fr; gap: 36px; }
+
+      /* Diff strip */
+      .diff-strip { grid-template-columns: 1fr 1fr; }
+
+      /* Proof — screenshots collapse to column */
+      .proof-grid > .proof-mockup.tall { max-width: 100%; flex: 1 1 100%; }
+      .proof-grid > div:not(.proof-mockup) { flex: 1 1 100%; }
+
+      /* Offer card */
+      .offer-header { padding: 28px 20px 22px; }
+      .offer-body   { padding: 24px 20px; }
+      .offer-int    { font-size: 52px; letter-spacing: -2px; }
+      .offer-curr   { font-size: 18px; padding-top: 8px; }
+      .offer-dec    { font-size: 22px; padding-top: 12px; }
+      .offer-btn    { padding: 16px; font-size: 15px; }
+
+      /* Authority */
+      .thinkers-grid     { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+      .thinker-initial   { width: 44px; height: 44px; font-size: 16px; }
+      .authority-quote   { padding: 22px 20px; }
+
+      /* FAQ */
+      .faq-q   { font-size: 14px; padding: 16px 18px; }
+      .faq-ans { font-size: 13px; padding: 0 18px 16px; }
+
+      /* CTA final */
+      .btn-cta-gold { padding: 16px 28px; font-size: 16px; width: 100%; box-sizing: border-box; }
+      .cta-value-text { font-size: 14px; }
+
+      /* Footer */
+      .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+      .footer-links { justify-content: center; flex-wrap: wrap; gap: 12px; }
+    }
+
+    /* ═══════════════════════════════════════════
+       MOBILE SMALL — ≤ 480 px
+    ═══════════════════════════════════════════ */
+    @media (max-width: 480px) {
       .nav-link { display: none; }
-      .offer-header { padding: 32px 24px 24px; }
-      .offer-body { padding: 24px; }
+
+      /* Hero */
+      .hero { padding: 78px 18px 52px; }
+      .hero-eyebrow { font-size: 10px; letter-spacing: 1.4px; }
+      .hero-price { border-radius: 999px; padding: 6px 16px; }
+      .price-amount { font-size: 22px; }
+      .hero-actions { gap: 10px; margin-bottom: 36px; }
+
+      /* Trust microcopy — 1 per line on tiny screens */
+      .cta-trust { flex-direction: column; align-items: flex-start; gap: 6px; padding: 0 4px; }
+
+      /* Section tighten */
+      .section       { padding: 52px 18px; }
+      .proof-section { padding: 52px 18px; }
+      .authority-section { padding: 52px 18px; }
+      .faq-section   { padding: 52px 18px; }
+      .ws-section    { padding: 44px 18px; }
+      .cta-final     { padding: 64px 18px; }
+      .inner         { padding: 0; }
+
+      /* Diff strip — 1 col */
+      .diff-strip { grid-template-columns: 1fr; }
+
+      /* Thinkers — 2 col */
+      .thinkers-grid { grid-template-columns: repeat(2, 1fr); }
+
+      /* Offer */
+      .offer-int  { font-size: 46px; }
+      .offer-body { padding: 20px 18px; }
+      .offer-list li { font-size: 13px; }
+
+      /* Proof — mobile screenshot caption */
+      .proof-mockup-label { font-size: 13px; }
+      .proof-caption      { font-size: 12px; }
+
+      /* FAQ */
+      .faq-list { margin-top: 36px; }
+
+      /* Closing block */
+      .cta-value-text { font-size: 13px; }
+    }
+
+    /* ═══════════════════════════════════════════
+       LEGACY override kept from previous build
+    ═══════════════════════════════════════════ */
+    @media (max-width: 600px) {
+      .footer-inner { flex-direction: column; text-align: center; }
     }
 
     /* ─────────────────────────────────────────
@@ -1059,7 +1181,24 @@
       .thinkers-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-  </style>
+  
+    /* Proof right column — responsive */
+    @media (max-width: 768px) {
+      .proof-right-col { flex: 1 1 100% !important; }
+    }
+    /* Mobile screenshot row — stack on small screens */
+    @media (max-width: 480px) {
+      .proof-right-col > div:last-child { flex-direction: column; }
+      .proof-right-col > div:last-child > div:first-child { flex: 0 0 auto; width: 100%; max-width: 200px; margin: 0 auto; }
+    }
+
+    .closing-decision-block { padding: 60px 24px; }
+    @media (max-width: 768px) { .closing-decision-block { padding: 48px 20px; } }
+    @media (max-width: 480px) { .closing-decision-block { padding: 40px 18px; } }
+    .closing-decision-block p:first-child { font-size: 20px; }
+    @media (max-width: 768px) { .closing-decision-block p:first-child { font-size: 17px !important; } }
+    @media (max-width: 480px) { .closing-decision-block p:first-child { font-size: 16px !important; } }
+</style>
 </head>
 <body>
 
@@ -1162,7 +1301,7 @@
       </div>
 
       <!-- Coluna direita -->
-      <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:28px;">
+      <div class="proof-right-col" style="flex:1 1 320px;display:flex;flex-direction:column;gap:28px;">
 
         <!-- Ebooks real screenshot -->
         <div class="proof-mockup" style="padding:0;overflow:hidden;background:transparent;border:1.5px solid rgba(224,123,84,0.3);box-shadow:0 24px 80px rgba(0,0,0,0.6),0 0 40px rgba(224,123,84,0.08);">
@@ -1649,7 +1788,7 @@
     <div class="section-tag">Prova Social</div>
     <h2 class="section-title">O que estão dizendo<br />sobre a Bíblia Alpha</h2>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:48px;max-width:960px;margin-left:auto;margin-right:auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:48px;max-width:960px;margin-left:auto;margin-right:auto;">
 
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px 24px;position:relative;">
         <div style="font-size:32px;color:var(--gold);line-height:1;margin-bottom:16px;opacity:0.6;">"</div>
@@ -1692,7 +1831,7 @@
 </section>
 
 <!-- FECHAMENTO DECISÃO -->
-<section style="background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 24px;text-align:center;">
+<section class="closing-decision-block" style="background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;">
   <div style="max-width:620px;margin:0 auto;">
     <p style="font-size:20px;color:var(--text);line-height:1.7;font-weight:400;margin-bottom:16px;">
       Você pode continuar estudando da mesma forma…<br />
