@@ -1,35 +1,26 @@
-name: Build and Deploy to Hostinger
+name: Deploy Landing Page to Hostinger
 
-on:
-  push:
-    branches: [main]
+    on:
+      push:
+        branches: [main]
+      workflow_dispatch:
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        permissions:
+          contents: write
+        steps:
+          - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
+          - name: Deploy static files to deploy branch
+            uses: peaceiris/actions-gh-pages@v3
+            with:
+              github_token: ${{ secrets.GITHUB_TOKEN }}
+              publish_dir: dist/apps/web
+              publish_branch: deploy
+              force_orphan: true
 
-      - name: Install dependencies
-        run: cd apps/web && npm install
-
-      - name: Build
-        run: cd apps/web && npm run build
-
-      - name: Deploy to deploy branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist/apps/web
-          publish_branch: deploy
-          force_orphan: true
-
-      - name: Trigger Hostinger deployment
-        run: curl -s -X POST https://webhooks.hostinger.com/deploy/025d541b186cb23b8843a8c953abe67c
+          - name: Trigger Hostinger deployment
+            run: curl -s -X POST https://webhooks.hostinger.com/deploy/025d541b186cb23b8843a8c953abe67c
+    
