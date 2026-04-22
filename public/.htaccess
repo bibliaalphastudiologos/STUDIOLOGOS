@@ -1,0 +1,8 @@
+Options -Indexes
+DirectoryIndex index.html index.php
+
+# No cache
+<FilesMatch "\.html$">
+  Header set Cache-Control "no-store, no-cache, must-revalidate"
+  Header set Pragma "no-cache"
+</FilesMatch>
