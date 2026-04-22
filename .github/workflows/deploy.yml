@@ -32,4 +32,4 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           local-dir: ./dist/apps/web/
           server-dir: /public_html/
-          dangerous-clean-slate: false
+          dangerous-clean-slate: true
