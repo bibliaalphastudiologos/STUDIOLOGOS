@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#1a1b1e"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="60" fill="#26272b"/>
+  <line x1="0" y1="60" x2="1200" y2="60" stroke="#32333a" stroke-width="1"/>
+  
+  <!-- Back button -->
+  <rect x="20" y="16" width="32" height="28" rx="6" fill="#32333a"/>
+  <text x="30" y="35" font-size="14" fill="#9a9a97">←</text>
+  
+  <!-- Title -->
+  <text x="66" y="38" font-size="18" font-weight="800" fill="#e9e9e7">Biblioteca Teológica</text>
+  
+  <!-- Badge -->
+  <rect x="280" y="18" width="60" height="24" rx="5" fill="#e07b54" fill-opacity="0.15"/>
+  <text x="295" y="35" font-size="11" font-weight="700" fill="#e07b54">47 obras</text>
+  
+  <!-- Search bar -->
+  <rect x="700" y="14" width="320" height="32" rx="7" fill="#32333a"/>
+  <text x="720" y="35" font-size="12" fill="#5a5a57">🔍  Buscar obra, autor...</text>
+  
+  <!-- Filter tabs -->
+  <rect x="20" y="76" width="100" height="30" rx="7" fill="#e07b54" fill-opacity="0.12"/>
+  <rect x="20" y="76" width="100" height="30" rx="7" fill="transparent" stroke="#e07b54" stroke-width="1" fill-opacity="0"/>
+  <text x="44" y="96" font-size="12" font-weight="700" fill="#e07b54">Todos</text>
+  
+  <rect x="128" y="76" width="110" height="30" rx="7" fill="#26272b"/>
+  <text x="145" y="96" font-size="12" fill="#7a7a77">Patrística</text>
+  
+  <rect x="246" y="76" width="100" height="30" rx="7" fill="#26272b"/>
+  <text x="263" y="96" font-size="12" fill="#7a7a77">Reforma</text>
+  
+  <rect x="354" y="76" width="110" height="30" rx="7" fill="#26272b"/>
+  <text x="363" y="96" font-size="12" fill="#7a7a77">Puritanos</text>
+  
+  <rect x="472" y="76" width="160" height="30" rx="7" fill="#26272b"/>
+  <text x="483" y="96" font-size="12" fill="#7a7a77">Teologia Sistemática</text>
+  
+  <rect x="640" y="76" width="170" height="30" rx="7" fill="#26272b"/>
+  <text x="655" y="96" font-size="12" fill="#7a7a77">Comentários Bíblicos</text>
+  
+  <!-- Grid section label -->
+  <text x="20" y="134" font-size="11" font-weight="700" fill="#7a7a77" letter-spacing="0.07em">PATRÍSTICA E CLÁSSICOS</text>
+  
+  <!-- Book cards row 1 -->
+  <!-- Card 1: Confissões -->
+  <rect x="20" y="148" width="175" height="240" rx="10" fill="#26272b" stroke="#32333a" stroke-width="1"/>
+  <rect x="20" y="148" width="175" height="160" rx="10" fill="#2e1a0e"/>
+  <rect x="20" y="288" width="175" height="20" fill="#2e1a0e"/>
+  <text x="107" y="238" font-size="32" fill="#e07b54" text-anchor="middle">✦</text>
+  <text x="107" y="268" font-size="13" font-weight="800" fill="#e9e9e7" text-anchor="middle">Confissões</text>
+  <text x="107" y="312" font-size="12" font-weight="700" fill="#e9e9e7" text-anchor="middle">Confissões</text>
+  <text x="107" y="330" font-size="11" fill="#7a7a77" text-anchor="middle">Agostinho de Hipona</text>
+  <rect x="28" y="344" width="60" height="18" rx="4" fill="#32333a"/>
+  <text x="58" y="357" font-size="10" fill="#7a7a77" text-anchor="middle">Patrística</text>
+  <text x="165" y="380" font-size="11" fill="#e07b54" text-anchor="end">Abrir →</text>
+  
+  <!-- Card 2: Cidade de Deus -->
+  <rect x="208" y="148" width="175" height="240" rx="10" fill="#26272b" stroke="#32333a" stroke-width="1"/>
+  <rect x="208" y="148" width="175" height="160" rx="10" fill="#0e1a2e"/>
+  <rect x="208" y="288" width="175" height="20" fill="#0e1a2e"/>
+  <text x="295" y="238" font-size="32" fill="#6088d4" text-anchor="middle">✦</text>
+  <text x="295" y="268" font-size="13" font-weight="800" fill="#e9e9e7" text-anchor="middle">A Cidade de Deus</text>
+  <text x="295" y="312" font-size="12" font-weight="700" fill="#e9e9e7" text-anchor="middle">A Cidade de Deus</text>
+  <text x="295" y="330" font-size="11" fill="#7a7a77" text-anchor="middle">Agostinho de Hipona</text>
+  <rect x="216" y="344" width="60" height="18" rx="4" fill="#32333a"/>
+  <text x="246" y="357" font-size="10" fill="#7a7a77" text-anchor="middle">Patrística</text>
+  <text x="353" y="380" font-size="11" fill="#e07b54" text-anchor="end">Abrir →</text>
+  
+  <!-- Card 3: Institutas -->
+  <rect x="396" y="148" width="175" height="240" rx="10" fill="#26272b" stroke="#32333a" stroke-width="1"/>
+  <rect x="396" y="148" width="175" height="160" rx="10" fill="#1a2e0e"/>
+  <rect x="396" y="288" width="175" height="20" fill="#1a2e0e"/>
+  <text x="483" y="238" font-size="32" fill="#60d480" text-anchor="middle">✦</text>
+  <text x="483" y="268" font-size="12" font-weight="800" fill="#e9e9e7" text-anchor="middle">Institutas da</text>
+  <text x="483" y="308" font-size="12" font-weight="700" fill="#e9e9e7" text-anchor="middle">Institutas da Rel. Cristã</text>
+  <text x="483" y="326" font-size="11" fill="#7a7a77" text-anchor="middle">João Calvino</text>
+  <rect x="404" y="340" width="60" height="18" rx="4" fill="#32333a"/>
+  <text x="434" y="353" font-size="10" fill="#7a7a77" text-anchor="middle">Reforma</text>
+  <text x="541" y="378" font-size="11" fill="#e07b54" text-anchor="end">Abrir →</text>
+  
+  <!-- Card 4: 95 Teses -->
+  <rect x="584" y="148" width="175" height="240" rx="10" fill="#26272b" stroke="#32333a" stroke-width="1"/>
+  <rect x="584" y="148" width="175" height="160" rx="10" fill="#2e2e0e"/>
+  <rect x="584" y="288" width="175" height="20" fill="#2e2e0e"/>
+  <text x="671" y="238" font-size="32" fill="#d4d460" text-anchor="middle">✦</text>
+  <text x="671" y="268" font-size="13" font-weight="800" fill="#e9e9e7" text-anchor="middle">As 95 Teses</text>
+  <text x="671" y="312" font-size="12" font-weight="700" fill="#e9e9e7" text-anchor="middle">As 95 Teses</text>
+  <text x="671" y="330" font-size="11" fill="#7a7a77" text-anchor="middle">Martinho Lutero</text>
+  <rect x="592" y="344" width="60" height="18" rx="4" fill="#32333a"/>
+  <text x="622" y="357" font-size="10" fill="#7a7a77" text-anchor="middle">Reforma</text>
+  <text x="729" y="380" font-size="11" fill="#e07b54" text-anchor="end">Abrir →</text>
+  
+  <!-- Card 5: O Peregrino -->
+  <rect x="772" y="148" width="175" height="240" rx="10" fill="#26272b" stroke="#32333a" stroke-width="1"/>
+  <rect x="772" y="148" width="175" height="160" rx="10" fill="#2e0e1a"/>
+  <rect x="772" y="288" width="175" height="20" fill="#2e0e1a"/>
+  <text x="859" y="238" font-size="32" fill="#d460a0" text-anchor="middle">✦</text>
+  <text x="859" y="268" font-size="13" font-weight="800" fill="#e9e9e7" text-anchor="middle">O Peregrino</text>
+  <text x="859" y="312" font-size="12" font-weight="700" fill="#e9e9e7" text-anchor="middle">O Peregrino</text>
+  <text x="859" y="330" font-size="11" fill="#7a7a77" text-anchor="middle">John Bunyan</text>
+  <rect x="780" y="344" width="60" height="18" rx="4" fill="#32333a"/>
+  <text x="810" y="357" font-size="10" fill="#7a7a77" text-anchor="middle">Puritanos</text>
+  <text x="917" y="380" font-size="11" fill="#e07b54" text-anchor="end">Abrir →</text>
+  
+  <!-- Card 6: Teologia Sistemática -->
+  <rect x="960" y="148" width="220" height="240" rx="10" fill="#26272b" stroke="#32333a" stroke-width="1"/>
+  <rect x="960" y="148" width="220" height="160" rx="10" fill="#0e2e2e"/>
+  <rect x="960" y="288" width="220" height="20" fill="#0e2e2e"/>
+  <text x="1070" y="238" font-size="32" fill="#60d4d4" text-anchor="middle">✦</text>
+  <text x="1070" y="268" font-size="12" font-weight="800" fill="#e9e9e7" text-anchor="middle">Teologia Sistemática</text>
+  <text x="1070" y="312" font-size="12" font-weight="700" fill="#e9e9e7" text-anchor="middle">Teologia Sistemática</text>
+  <text x="1070" y="330" font-size="11" fill="#7a7a77" text-anchor="middle">Louis Berkhof</text>
+  <rect x="968" y="344" width="110" height="18" rx="4" fill="#32333a"/>
+  <text x="1023" y="357" font-size="10" fill="#7a7a77" text-anchor="middle">Teologia Sistemática</text>
+  <text x="1162" y="380" font-size="11" fill="#e07b54" text-anchor="end">Abrir →</text>
+  
+  <!-- Row 2 label -->
+  <text x="20" y="418" font-size="11" font-weight="700" fill="#7a7a77" letter-spacing="0.07em">COMENTÁRIOS BÍBLICOS</text>
+  
+  <!-- Row 2 partial cards -->
+  <rect x="20" y="434" width="175" height="200" rx="10" fill="#26272b" stroke="#32333a" stroke-width="1"/>
+  <rect x="20" y="434" width="175" height="120" rx="10" fill="#2e1e0e"/>
+  <rect x="20" y="534" width="175" height="20" fill="#2e1e0e"/>
+  <text x="107" y="504" font-size="28" fill="#e0a454" text-anchor="middle">✦</text>
+  <text x="107" y="575" font-size="12" font-weight="700" fill="#e9e9e7" text-anchor="middle">Coment. Bíblico</text>
+  <text x="107" y="593" font-size="11" fill="#7a7a77" text-anchor="middle">Matthew Henry</text>
+  
+  <rect x="208" y="434" width="175" height="200" rx="10" fill="#26272b" stroke="#32333a" stroke-width="1"/>
+  <rect x="208" y="434" width="175" height="120" rx="10" fill="#1e0e2e"/>
+  <rect x="208" y="534" width="175" height="20" fill="#1e0e2e"/>
+  <text x="295" y="504" font-size="28" fill="#a060d4" text-anchor="middle">✦</text>
+  <text x="295" y="575" font-size="12" font-weight="700" fill="#e9e9e7" text-anchor="middle">O Tesouro de Davi</text>
+  <text x="295" y="593" font-size="11" fill="#7a7a77" text-anchor="middle">C. H. Spurgeon</text>
+  
+  <rect x="396" y="434" width="175" height="200" rx="10" fill="#26272b" stroke="#32333a" stroke-width="1"/>
+  <rect x="396" y="434" width="175" height="120" rx="10" fill="#0e1e2e"/>
+  <rect x="396" y="534" width="175" height="20" fill="#0e1e2e"/>
+  <text x="483" y="504" font-size="28" fill="#4090c0" text-anchor="middle">✦</text>
+  <text x="483" y="575" font-size="12" font-weight="700" fill="#e9e9e7" text-anchor="middle">Expos. de Toda a Bíblia</text>
+  <text x="483" y="593" font-size="11" fill="#7a7a77" text-anchor="middle">John Gill</text>
+  
+  <!-- Fade out effect on the right -->
+  <rect x="580" y="434" width="620" height="200" rx="10" fill="url(#fade)"/>
+  <defs>
+    <linearGradient id="fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a1b1e;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:#1a1b1e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- More cards faded -->
+  <rect x="584" y="434" width="175" height="200" rx="10" fill="#26272b" stroke="#32333a" stroke-width="1" opacity="0.5"/>
+  <rect x="772" y="434" width="175" height="200" rx="10" fill="#26272b" stroke="#32333a" stroke-width="1" opacity="0.3"/>
+  <rect x="960" y="434" width="175" height="200" rx="10" fill="#26272b" stroke="#32333a" stroke-width="1" opacity="0.1"/>
+  
+  <!-- Footer info -->
+  <text x="600" y="710" font-size="13" fill="#5a5a57" text-anchor="middle">47 obras teológicas de domínio público, integradas à sua leitura bíblica</text>
+</svg>
