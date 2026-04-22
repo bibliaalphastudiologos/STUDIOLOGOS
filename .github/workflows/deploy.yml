@@ -24,12 +24,23 @@ jobs:
       - name: Build
         run: npm run build --prefix apps/web
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
-          local-dir: ./dist/apps/web/
-          server-dir: /public_html/
-          dangerous-clean-slate: true
+      - name: Wrap index.html as index.php (bypass LiteSpeed static cache)
+        run: |
+          cp dist/apps/web/index.html dist/apps/web/index.php
+          echo "" > dist/apps/web/index.html
+
+      - name: Install lftp
+        run: sudo apt-get install -y lftp
+
+      - name: Deploy via lftp
+        env:
+          FTP_HOST: 89.116.115.179
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+        run: |
+          lftp -u "$FTP_USER","$FTP_PASS" ftp://$FTP_HOST <<EOF
+          set ftp:ssl-allow false
+          set net:timeout 60
+          mirror --reverse --delete --verbose --no-perms dist/apps/web/ /public_html/
+          bye
+          EOF
