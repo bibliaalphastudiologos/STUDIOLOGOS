@@ -8,8 +8,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -25,13 +23,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to deploy branch
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy via FTP to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist/apps/web
-          publish_branch: deploy
-          force_orphan: true
-
-      - name: Trigger Hostinger deployment
-        run: curl -s -X POST https://webhooks.hostinger.com/deploy/025d541b186cb23b8843a8c953abe67c
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          port: 21
+          local-dir: ./dist/apps/web/
+          server-dir: /home/u876483543/domains/studiologos.com.br/public_html/
