@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: y
+    alias: a{
       '@': path.resolve(__dirname, './src'),
     },
   },
