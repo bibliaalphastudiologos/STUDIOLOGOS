@@ -1,0 +1,14 @@
+name: Trigger Hostinger Deploy
+
+    on:
+      workflow_dispatch:
+
+    jobs:
+      trigger:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Trigger Hostinger webhook
+            run: |
+              STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST https://webhooks.hostinger.com/deploy/025d541b186cb23b8843a8c953abe67c)
+              echo "Webhook response: $STATUS"
+    
