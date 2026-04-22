@@ -24,14 +24,49 @@ export default function ProductCard({ product, onClick }) {
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <span className="text-5xl opacity-20 group-hover:opacity-40 transition-opacity duration-300">&#127912;</span>
+          <div className="w-full h-full flex items-center justify-center relative">
+            {/* Subtle grid background */}
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: 'linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px)',
+                backgroundSize: '24px 24px',
+              }}
+            />
+            {/* Gold monogram mark */}
+            <div className="relative flex flex-col items-center gap-3">
+              <div
+                className="w-10 h-10 flex items-center justify-center border border-[rgba(201,168,76,0.22)] group-hover:border-[rgba(201,168,76,0.5)] transition-colors duration-300"
+                style={{ background: 'rgba(201,168,76,0.04)' }}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(201,168,76,0.45)"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="group-hover:stroke-[rgba(201,168,76,0.75)] transition-colors duration-300"
+                >
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <div
+                className="h-px w-8 opacity-20 group-hover:opacity-50 transition-opacity duration-300"
+                style={{ background: 'linear-gradient(to right, transparent, #C9A84C, transparent)' }}
+              />
+            </div>
+            {/* Radial glow on hover */}
+            <div
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style={{ background: 'radial-gradient(circle at center, rgba(201,168,76,0.06) 0%, transparent 70%)' }}
+            />
           </div>
         )}
-        <div
-          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          style={{ background: 'radial-gradient(circle at center, rgba(201,168,76,0.06) 0%, transparent 70%)' }}
-        />
       </div>
 
       {/* Content */}
@@ -64,4 +99,4 @@ export default function ProductCard({ product, onClick }) {
       </div>
     </div>
   );
-    }
+}
