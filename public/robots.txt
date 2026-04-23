@@ -1,0 +1,10 @@
+User-agent: *
+    Allow: /
+
+    # Sitemaps
+    Sitemap: https://bibliaalpha.org/sitemap.xml
+    Sitemap: https://studiologos.com.br/sitemap.xml
+
+    # Crawl-delay for bots
+    Crawl-delay: 1
+    
