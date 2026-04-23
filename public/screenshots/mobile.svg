@@ -1,106 +1,185 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="900" viewBox="0 0 440 900">
   <defs>
     <style>text { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; }</style>
-    <clipPath id="screen-clip">
-      <rect x="0" y="0" width="390" height="844" rx="40"/>
+    <clipPath id="phone-clip">
+      <rect x="20" y="10" width="400" height="880" rx="46"/>
     </clipPath>
-  </defs>
-  
-  <!-- Background -->
-  <rect width="390" height="844" fill="#1a1b1e" rx="40"/>
-  
-  <!-- Status bar -->
-  <rect width="390" height="44" fill="#26272b"/>
-  <text x="30" y="28" font-size="12" font-weight="600" fill="#e9e9e7">9:41</text>
-  <text x="340" y="28" font-size="12" fill="#e9e9e7">●●●</text>
-  
-  <!-- Nav bar -->
-  <rect y="44" width="390" height="50" fill="#26272b"/>
-  <line x1="0" y1="94" x2="390" y2="94" stroke="#32333a" stroke-width="1"/>
-  <rect x="12" y="56" width="30" height="26" rx="6" fill="#32333a"/>
-  <text x="19" y="74" font-size="14" fill="#9a9a97">☰</text>
-  <text x="56" y="74" font-size="15" font-weight="700" fill="#e9e9e7">Gênesis 1</text>
-  <rect x="300" y="56" width="70" height="26" rx="6" fill="#32333a"/>
-  <text x="315" y="74" font-size="11" font-weight="600" fill="#b5b6b9">ARC  ▾</text>
-  
-  <!-- Content area -->
-  <!-- Chapter header -->
-  <text x="20" y="135" font-size="22" font-weight="800" fill="#e9e9e7">Gênesis 1</text>
-  <text x="20" y="156" font-size="13" fill="#7a7a77">A Criação do Mundo</text>
-  <line x1="20" y1="168" x2="370" y2="168" stroke="#2e2e33" stroke-width="1"/>
-  
-  <!-- Verse 1 -->
-  <text x="20" y="196" font-size="11" font-weight="800" fill="#e07b54">1</text>
-  <text x="38" y="196" font-size="15" fill="#e9e9e7">No princípio criou Deus</text>
-  <text x="38" y="216" font-size="15" fill="#e9e9e7">os céus e a terra.</text>
-  
-  <!-- Comment box -->
-  <rect x="38" y="228" width="332" height="80" rx="8" fill="#e07b54" fill-opacity="0.08"/>
-  <rect x="38" y="228" width="3" height="80" rx="2" fill="#e07b54"/>
-  <text x="50" y="247" font-size="10" font-weight="800" fill="#e07b54" letter-spacing="0.06em">MATTHEW HENRY</text>
-  <text x="50" y="264" font-size="12" fill="#9a9a97">O primeiro verso da Bíblia</text>
-  <text x="50" y="280" font-size="12" fill="#9a9a97">estabelece Deus como criador</text>
-  <text x="50" y="296" font-size="12" fill="#9a9a97">soberano de toda a existência.</text>
-  
-  <!-- Verse 2 -->
-  <text x="20" y="334" font-size="11" font-weight="800" fill="#e07b54">2</text>
-  <text x="38" y="334" font-size="15" fill="#e9e9e7">A terra era sem forma e</text>
-  <text x="38" y="354" font-size="15" fill="#e9e9e7">vazia; e havia trevas sobre</text>
-  <text x="38" y="374" font-size="15" fill="#e9e9e7">a face do abismo...</text>
-  
-  <!-- Verse 3 highlighted -->
-  <rect x="14" y="390" width="362" height="38" rx="6" fill="#e07b54" fill-opacity="0.08"/>
-  <text x="20" y="415" font-size="11" font-weight="800" fill="#e07b54">3</text>
-  <text x="38" y="415" font-size="15" font-weight="600" fill="#e9e9e7">E disse Deus: Haja luz;</text>
-  
-  <!-- Calvino comment -->
-  <rect x="38" y="438" width="332" height="76" rx="8" fill="#e07b54" fill-opacity="0.08"/>
-  <rect x="38" y="438" width="3" height="76" rx="2" fill="#e07b54"/>
-  <text x="50" y="456" font-size="10" font-weight="800" fill="#e07b54" letter-spacing="0.06em">JOÃO CALVINO</text>
-  <text x="50" y="472" font-size="12" fill="#9a9a97">Aqui o Logos (Jo 1:3) é</text>
-  <text x="50" y="488" font-size="12" fill="#9a9a97">revelado como agente da</text>
-  <text x="50" y="504" font-size="12" fill="#9a9a97">criação, mostrando a Trindade.</text>
-  
-  <!-- Verse 4 -->
-  <text x="20" y="540" font-size="11" font-weight="800" fill="#e07b54">4</text>
-  <text x="38" y="540" font-size="15" fill="#e9e9e7">E viu Deus que a luz era</text>
-  <text x="38" y="560" font-size="15" fill="#e9e9e7">boa; e fez separação entre</text>
-  <text x="38" y="580" font-size="15" fill="#e9e9e7">a luz e as trevas.</text>
-  
-  <!-- Verse 5 -->
-  <text x="20" y="616" font-size="11" font-weight="800" fill="#e07b54">5</text>
-  <text x="38" y="616" font-size="15" fill="#e9e9e7">E chamou Deus à luz Dia,</text>
-  <text x="38" y="636" font-size="15" fill="#e9e9e7">e às trevas chamou Noite.</text>
-  
-  <!-- Gradient fade -->
-  <rect x="0" y="660" width="390" height="120" fill="url(#bottom-fade)"/>
-  <defs>
-    <linearGradient id="bottom-fade" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1b1e;stop-opacity:0" />
-      <stop offset="100%" style="stop-color:#1a1b1e;stop-opacity:1" />
+    <clipPath id="screen-clip">
+      <rect x="28" y="18" width="384" height="864" rx="40"/>
+    </clipPath>
+    <linearGradient id="phone-frame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a3b3e"/>
+      <stop offset="50%" stop-color="#28292c"/>
+      <stop offset="100%" stop-color="#1e1f22"/>
     </linearGradient>
+    <linearGradient id="screen-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c1d20"/>
+      <stop offset="100%" stop-color="#17181b"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c8a84b"/>
+      <stop offset="50%" stop-color="#f0d080"/>
+      <stop offset="100%" stop-color="#c8a84b"/>
+    </linearGradient>
+    <linearGradient id="accent-bar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e07b54"/><stop offset="100%" stop-color="#b85a2e"/>
+    </linearGradient>
+    <linearGradient id="bottom-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c1d20" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1c1d20" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="comment-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e07b54" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#e07b54" stop-opacity="0.04"/>
+    </linearGradient>
+    <filter id="phone-shadow">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000" flood-opacity="0.7"/>
+    </filter>
+    <filter id="glow-a">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  
-  <!-- Bottom nav bar -->
-  <rect y="780" width="390" height="64" fill="#26272b"/>
-  <line x1="0" y1="780" x2="390" y2="780" stroke="#32333a" stroke-width="1"/>
-  
-  <!-- Nav icons -->
-  <text x="45" y="812" font-size="22" text-anchor="middle" fill="#e07b54">📖</text>
-  <text x="45" y="828" font-size="10" text-anchor="middle" fill="#e07b54">Bíblia</text>
-  
-  <text x="130" y="812" font-size="22" text-anchor="middle" fill="#5a5a57">📚</text>
-  <text x="130" y="828" font-size="10" text-anchor="middle" fill="#5a5a57">Ebooks</text>
-  
-  <text x="215" y="812" font-size="22" text-anchor="middle" fill="#5a5a57">📅</text>
-  <text x="215" y="828" font-size="10" text-anchor="middle" fill="#5a5a57">Planos</text>
-  
-  <text x="300" y="812" font-size="22" text-anchor="middle" fill="#5a5a57">🔍</text>
-  <text x="300" y="828" font-size="10" text-anchor="middle" fill="#5a5a57">Buscar</text>
-  
-  <text x="360" y="812" font-size="22" text-anchor="middle" fill="#5a5a57">⚙️</text>
-  <text x="360" y="828" font-size="10" text-anchor="middle" fill="#5a5a57">Config</text>
-  
+
+  <!-- Background (canvas) -->
+  <rect width="440" height="900" fill="#111214"/>
+
+  <!-- Subtle radial glow behind phone -->
+  <ellipse cx="220" cy="450" rx="200" ry="380" fill="#e07b54" fill-opacity="0.03"/>
+
+  <!-- ── PHONE FRAME ── -->
+  <g filter="url(#phone-shadow)">
+    <rect x="20" y="10" width="400" height="880" rx="46" fill="url(#phone-frame)"/>
+  </g>
+
+  <!-- Phone frame inner bezel sheen -->
+  <rect x="22" y="12" width="396" height="876" rx="44" fill="none" stroke="#4a4b4e" stroke-width="0.5"/>
+
+  <!-- Screen -->
+  <rect x="28" y="18" width="384" height="864" rx="40" fill="url(#screen-bg)" clip-path="url(#screen-clip)"/>
+
+  <!-- ── STATUS BAR ── -->
+  <rect x="28" y="18" width="384" height="50" fill="#222326" clip-path="url(#screen-clip)"/>
+
+  <!-- Dynamic island -->
+  <rect x="160" y="26" width="120" height="28" rx="14" fill="#0a0a0c"/>
+  <!-- Camera dot inside island -->
+  <circle cx="261" cy="40" r="5" fill="#1a1a1c"/>
+  <circle cx="261" cy="40" r="2.5" fill="#2a2a2c"/>
+
+  <!-- Time -->
+  <text x="52" y="48" font-size="14" font-weight="600" fill="#e9e9e7">9:41</text>
+
+  <!-- Battery / signal icons -->
+  <text x="338" y="48" font-size="11" fill="#e9e9e7" text-anchor="middle">●●●  ▌▌▌  🔋</text>
+
+  <!-- Status bar bottom line -->
+  <rect x="28" y="68" width="384" height="1" fill="#2e2f34" clip-path="url(#screen-clip)"/>
+
+  <!-- ── NAV BAR ── -->
+  <rect x="28" y="68" width="384" height="52" fill="#222326" clip-path="url(#screen-clip)"/>
+  <rect x="28" y="119" width="384" height="1" fill="#2e2f34" clip-path="url(#screen-clip)"/>
+
+  <!-- Hamburger -->
+  <rect x="42" y="80" width="34" height="30" rx="8" fill="#2a2b2e" stroke="#35363c" stroke-width="1"/>
+  <rect x="49" y="88" width="20" height="2" rx="1" fill="#7a7a77"/>
+  <rect x="49" y="93" width="16" height="2" rx="1" fill="#7a7a77"/>
+  <rect x="49" y="98" width="20" height="2" rx="1" fill="#7a7a77"/>
+
+  <!-- Chapter title in nav -->
+  <text x="220" y="100" font-size="15" font-weight="700" fill="#e9e9e7" text-anchor="middle">Gênesis 1</text>
+
+  <!-- Translation dropdown -->
+  <rect x="330" y="80" width="66" height="30" rx="8" fill="#2a2b2e" stroke="#35363c" stroke-width="1"/>
+  <text x="363" y="100" font-size="11" font-weight="600" fill="#b5b6b9" text-anchor="middle">ARC  ▾</text>
+
+  <!-- ── CONTENT AREA ── -->
+  <!-- Chapter header -->
+  <text x="42" y="158" font-size="24" font-weight="800" fill="#e9e9e7">Gênesis 1</text>
+  <text x="42" y="178" font-size="13" fill="#6a6a67">A Criação do Mundo</text>
+
+  <!-- Gold divider -->
+  <rect x="42" y="190" width="40" height="2" rx="1" fill="url(#gold)"/>
+  <rect x="86" y="191" width="300" height="1" fill="#2a2b2e"/>
+
+  <!-- Verse 1 -->
+  <text x="42" y="222" font-size="11" font-weight="800" fill="#e07b54">1</text>
+  <text x="60" y="222" font-size="15" fill="#deded9">No princípio criou Deus</text>
+  <text x="60" y="242" font-size="15" fill="#deded9">os céus e a terra.</text>
+
+  <!-- Comment 1 — Matthew Henry -->
+  <rect x="60" y="256" width="318" height="88" rx="10" fill="url(#comment-bg)" clip-path="url(#screen-clip)"/>
+  <rect x="60" y="256" width="3" height="88" rx="2" fill="url(#accent-bar)"/>
+  <text x="72" y="276" font-size="9" font-weight="800" fill="#e07b54" letter-spacing="1.2">MATTHEW HENRY</text>
+  <text x="72" y="294" font-size="12" fill="#9a9a97">O primeiro verso estabelece</text>
+  <text x="72" y="312" font-size="12" fill="#9a9a97">Deus como criador soberano</text>
+  <text x="72" y="330" font-size="12" fill="#9a9a97">de toda a existência.</text>
+
+  <!-- Verse 2 -->
+  <text x="42" y="368" font-size="11" font-weight="800" fill="#e07b54">2</text>
+  <text x="60" y="368" font-size="15" fill="#deded9">A terra era sem forma e</text>
+  <text x="60" y="388" font-size="15" fill="#deded9">vazia; e havia trevas sobre</text>
+  <text x="60" y="408" font-size="15" fill="#deded9">a face do abismo...</text>
+
+  <!-- Verse 3 — highlighted -->
+  <rect x="34" y="422" width="362" height="42" rx="8" fill="#e07b54" fill-opacity="0.08"/>
+  <text x="42" y="449" font-size="11" font-weight="800" fill="#e07b54">3</text>
+  <text x="60" y="449" font-size="15" font-weight="600" fill="#e9e9e7">E disse Deus: Haja luz;</text>
+  <!-- Verse tag -->
+  <rect x="324" y="430" width="62" height="18" rx="5" fill="#e07b54" fill-opacity="0.2"/>
+  <text x="355" y="443" font-size="9" font-weight="700" fill="#e07b54" text-anchor="middle">destaque</text>
+
+  <!-- Comment 2 — Calvino -->
+  <rect x="60" y="476" width="318" height="82" rx="10" fill="url(#comment-bg)" clip-path="url(#screen-clip)"/>
+  <rect x="60" y="476" width="3" height="82" rx="2" fill="url(#accent-bar)"/>
+  <text x="72" y="496" font-size="9" font-weight="800" fill="#e07b54" letter-spacing="1.2">JOÃO CALVINO</text>
+  <text x="72" y="514" font-size="12" fill="#9a9a97">O Logos (Jo 1:3) como agente</text>
+  <text x="72" y="532" font-size="12" fill="#9a9a97">da criação, revelando a</text>
+  <text x="72" y="550" font-size="12" fill="#9a9a97">Trindade nas Escrituras.</text>
+
+  <!-- Verse 4 -->
+  <text x="42" y="582" font-size="11" font-weight="800" fill="#e07b54">4</text>
+  <text x="60" y="582" font-size="15" fill="#deded9">E viu Deus que a luz era</text>
+  <text x="60" y="602" font-size="15" fill="#deded9">boa; e fez separação entre</text>
+  <text x="60" y="622" font-size="15" fill="#deded9">a luz e as trevas.</text>
+
+  <!-- Verse 5 -->
+  <text x="42" y="656" font-size="11" font-weight="800" fill="#e07b54">5</text>
+  <text x="60" y="656" font-size="15" fill="#deded9">E chamou Deus à luz Dia,</text>
+  <text x="60" y="676" font-size="15" fill="#deded9">e às trevas chamou Noite.</text>
+
+  <!-- Bottom fade -->
+  <rect x="28" y="690" width="384" height="100" fill="url(#bottom-fade)" clip-path="url(#screen-clip)"/>
+
+  <!-- ── BOTTOM TAB BAR ── -->
+  <rect x="28" y="790" width="384" height="72" fill="#222326" clip-path="url(#screen-clip)"/>
+  <rect x="28" y="790" width="384" height="1" fill="#2e2f34"/>
+
+  <!-- Active tab glow -->
+  <rect x="46" y="790" width="68" height="2" rx="1" fill="url(#gold)" filter="url(#glow-a)"/>
+
+  <!-- Tab icons + labels -->
+  <text x="80" y="822" font-size="22" text-anchor="middle" fill="#e07b54">📖</text>
+  <text x="80" y="840" font-size="10" text-anchor="middle" font-weight="600" fill="#e07b54">Bíblia</text>
+
+  <text x="165" y="822" font-size="22" text-anchor="middle" fill="#4a4a47">📚</text>
+  <text x="165" y="840" font-size="10" text-anchor="middle" fill="#4a4a47">Ebooks</text>
+
+  <text x="250" y="822" font-size="22" text-anchor="middle" fill="#4a4a47">📅</text>
+  <text x="250" y="840" font-size="10" text-anchor="middle" fill="#4a4a47">Planos</text>
+
+  <text x="335" y="822" font-size="22" text-anchor="middle" fill="#4a4a47">🔍</text>
+  <text x="335" y="840" font-size="10" text-anchor="middle" fill="#4a4a47">Buscar</text>
+
   <!-- Home indicator -->
-  <rect x="155" y="836" width="80" height="4" rx="2" fill="#e9e9e7" opacity="0.4"/>
+  <rect x="170" y="856" width="100" height="5" rx="3" fill="#fff" fill-opacity="0.3"/>
+
+  <!-- Phone side buttons (left) -->
+  <rect x="16" y="180" width="4" height="40" rx="2" fill="#3a3b3e"/>
+  <rect x="16" y="230" width="4" height="60" rx="2" fill="#3a3b3e"/>
+  <rect x="16" y="300" width="4" height="60" rx="2" fill="#3a3b3e"/>
+
+  <!-- Power button (right) -->
+  <rect x="420" y="220" width="4" height="80" rx="2" fill="#3a3b3e"/>
+
 </svg>
