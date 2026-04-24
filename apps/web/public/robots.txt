@@ -1,2 +1,5 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://studiologos.com.br/sitemap.xml
+Crawl-delay: 1
