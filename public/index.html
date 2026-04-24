@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Studio Logos — Criadores da Bíblia Alpha | Estudo Bíblico Online</title>
-  <meta name="description" content="Studio Logos é o ministério criador da Bíblia Alpha — plataforma de estudo bíblico com comentários versículo por versículo, ebooks teológicos clássicos e devocionais. Acesse por R$27,90/mês." />
+  <meta name="description" content="Studio Logos é o ministério criador da Bíblia Alpha — plataforma de estudo bíblico com comentários versículo por versículo, ebooks teológicos clássicos e devocionais. PROMOÇÃO LIMITADA: 1 ano completo por R$47,90. Aproveite antes que encerre!" />
   <!-- ═══════════════════════════════════════════
        SEO — META BÁSICO
   ═══════════════════════════════════════════ -->
@@ -28,7 +28,7 @@
   <meta property="og:site_name" content="Studio Logos" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:title" content="Studio Logos — Criadores da Bíblia Alpha | Estudo Bíblico Online" />
-  <meta property="og:description" content="Studio Logos é o ministério criador da Bíblia Alpha. Estude as Escrituras com comentários versículo por versículo, ebooks teológicos e devocionais por R$27,90/mês." />
+  <meta property="og:description" content="Studio Logos é o ministério criador da Bíblia Alpha. Estude as Escrituras com comentários versículo por versículo, ebooks teológicos e devocionais. PROMOÇÃO: 1 ano por R$47,90 — oferta limitada!" />
   <meta property="og:url" content="https://studiologos.com.br/" />
   <meta property="og:image" content="https://studiologos.com.br/screenshots/leitura.svg" />
   <meta property="og:image:width" content="1200" />
@@ -40,7 +40,7 @@
   ═══════════════════════════════════════════ -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Studio Logos — Criadores da Bíblia Alpha | Estudo Bíblico Online" />
-  <meta name="twitter:description" content="Studio Logos é o ministério criador da Bíblia Alpha. Estudo bíblico profundo por R$27,90/mês." />
+  <meta name="twitter:description" content="Studio Logos — PROMOÇÃO LIMITADA: 1 ano de acesso à Bíblia Alpha por apenas R$47,90. Oferta encerra em breve!" />
   <meta name="twitter:image" content="https://studiologos.com.br/screenshots/leitura.svg" />
   <meta name="twitter:image:alt" content="Biblia Alpha — Interface de leitura e estudo bíblico" />
 
@@ -113,7 +113,7 @@
         "price": "27.90",
         "priceValidUntil": "2027-12-31",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=e87ef14851024ab19408b53d5241c844",
+        "url": "https://wa.me/5519993586153",
         "seller": {
           "@type": "Organization",
           "name": "Studio Logos"
@@ -1396,6 +1396,17 @@
     .closing-decision-block p:first-child { font-size: 20px; }
     @media (max-width: 768px) { .closing-decision-block p:first-child { font-size: 17px !important; } }
     @media (max-width: 480px) { .closing-decision-block p:first-child { font-size: 16px !important; } }
+
+  /* URGENCY PULSE ANIMATION */
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+  }
+  @keyframes urgency-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(220,38,38,0.4); }
+    50% { box-shadow: 0 0 40px rgba(220,38,38,0.8), 0 0 80px rgba(220,38,38,0.3); }
+  }
+
 </style>
 
   <!-- ═══════════════════════════════════════════
@@ -1429,7 +1440,7 @@
     <a href="/" class="nav-logo">Biblia<span>Alpha</span></a>
     <div class="nav-right">
       <a href="https://studiologos.com.br" class="nav-link" target="_blank" rel="noopener">Plataforma</a>
-      <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=e87ef14851024ab19408b53d5241c844" class="nav-cta" target="_blank" rel="noopener">Assinar agora</a>
+      <a href="https://wa.me/5519993586153" class="nav-cta" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#b91c1c,#dc2626);animation:pulse 2s infinite;">🔥 R$47,90/ANO</a>
     </div>
   </div>
 </nav>
@@ -1454,14 +1465,18 @@
     <em>mesmo sem formação teológica.</em>
   </p>
 
-  <div class="hero-price">
-    <span class="price-currency">R$</span>
-    <span class="price-amount">27,90</span>
-    <span class="price-period">/ mês</span>
+  <div style="background:rgba(220,38,38,0.1);border:1px solid rgba(220,38,38,0.4);border-radius:12px;padding:12px 20px;display:inline-block;margin:12px 0;">
+    <div style="color:#f87171;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">🔥 PROMOÇÃO LIMITADA — ENCERRA EM BREVE</div>
+    <div class="hero-price" style="margin:0;">
+      <span class="price-currency" style="color:#fbbf24;">R$</span>
+      <span class="price-amount" style="color:#fbbf24;">47,90</span>
+      <span class="price-period" style="color:#fbbf24;">/ 1 ANO</span>
+    </div>
+    <div style="color:var(--muted-2);font-size:12px;margin-top:4px;text-decoration:line-through;">Era R$334,80/ano no plano mensal</div>
   </div>
 
   <div class="hero-actions">
-    <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=e87ef14851024ab19408b53d5241c844" class="btn-primary" target="_blank" rel="noopener">Quero acessar a Bíblia Alpha agora</a>
+    <a href="https://wa.me/5519993586153" class="btn-primary" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#b91c1c,#dc2626);">🔥 PROMOÇÃO: 1 ANO POR R$47,90 — GARANTIR AGORA</a>
     <a href="https://studiologos.com.br" class="btn-ghost" target="_blank" rel="noopener">Ver a plataforma</a>
   </div>
   <div class="cta-trust" style="margin-top:14px;justify-content:center;">
@@ -1905,29 +1920,54 @@
 <div class="divider"></div>
 
 <!-- OFERTA -->
-<section class="section">
+<section class="section" style="position:relative;overflow:hidden;">
+  <!-- Urgency banner -->
+  <div style="background:linear-gradient(90deg,#b91c1c,#dc2626,#ef4444);color:#fff;text-align:center;padding:12px 20px;font-weight:800;font-size:15px;letter-spacing:0.5px;animation:pulse 2s infinite;">
+    🔥 ATENÇÃO: ESTA OFERTA ENCERRA EM BREVE — APÓS ISSO, VOLTA O PLANO MENSAL 🔥
+  </div>
+
   <div class="inner">
-    <div style="text-align:center; margin-bottom: 0;">
-      <div class="section-tag">Assinatura</div>
-      <h2 class="section-title">Um investimento mínimo.<br />Um impacto profundo.</h2>
+    <div style="text-align:center; margin-bottom: 32px;">
+      <div class="section-tag" style="background:rgba(220,38,38,0.15);color:#ef4444;border-color:rgba(220,38,38,0.3);">⚡ PROMOÇÃO LIMITADA</div>
+      <h2 class="section-title">Uma oportunidade única.<br />Um ano inteiro por quase nada.</h2>
+      <p style="color:var(--muted-2);font-size:16px;max-width:520px;margin:12px auto 0;">Essa condição especial não vai durar. Quando encerrar, a assinatura volta ao plano mensal regular.</p>
     </div>
 
     <div class="offer-wrap">
-      <div class="offer-card">
-        <div class="offer-header">
-          <div class="offer-tag">Plano Mensal</div>
-          <div class="offer-price-row">
-            <span class="offer-curr">R$</span>
-            <span class="offer-int">27</span>
-            <span class="offer-dec">,90</span>
-          </div>
-          <div class="offer-per">por mês — cancele quando quiser</div>
+      <div class="offer-card" style="border:2px solid rgba(220,38,38,0.5);position:relative;box-shadow:0 0 60px rgba(220,38,38,0.15),0 24px 80px rgba(0,0,0,0.6);">
+
+        <!-- Badge topo -->
+        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#b91c1c,#dc2626);color:#fff;font-weight:800;font-size:12px;letter-spacing:1px;padding:5px 20px;border-radius:20px;white-space:nowrap;text-transform:uppercase;">
+          🔥 OFERTA ENCERRA EM BREVE
         </div>
+
+        <div class="offer-header" style="background:linear-gradient(135deg,rgba(30,10,10,0.95),rgba(40,15,15,0.9));">
+          <div class="offer-tag" style="background:rgba(220,38,38,0.2);color:#f87171;">🗓️ Plano Anual — Promoção Exclusiva</div>
+          
+          <!-- Preço riscado -->
+          <div style="text-align:center;margin-top:8px;">
+            <span style="color:var(--muted-2);font-size:14px;text-decoration:line-through;">De R$334,80/ano (plano mensal)</span>
+          </div>
+
+          <div class="offer-price-row" style="justify-content:center;align-items:baseline;gap:4px;margin-top:4px;">
+            <span style="color:#f87171;font-size:18px;font-weight:700;">Por apenas</span>
+          </div>
+          <div class="offer-price-row" style="justify-content:center;align-items:baseline;gap:2px;">
+            <span class="offer-curr" style="color:#fbbf24;">R$</span>
+            <span class="offer-int" style="color:#fbbf24;font-size:72px;">47</span>
+            <span class="offer-dec" style="color:#fbbf24;">,90</span>
+          </div>
+          <div class="offer-per" style="color:#fbbf24;font-weight:700;font-size:16px;">por 1 ANO COMPLETO de assinatura</div>
+          <div style="margin-top:8px;background:rgba(220,38,38,0.2);border:1px solid rgba(220,38,38,0.4);border-radius:8px;padding:8px 16px;color:#fca5a5;font-size:13px;font-weight:600;text-align:center;">
+            ⏳ Economia de R$286,90 — Mas só enquanto durar!
+          </div>
+        </div>
+
         <div class="offer-body">
           <ul class="offer-list">
             <li>
               <span class="offer-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-              Acesso completo à plataforma
+              <strong>365 dias</strong> de acesso completo à plataforma
             </li>
             <li>
               <span class="offer-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
@@ -1951,23 +1991,28 @@
             </li>
           </ul>
 
-          <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=e87ef14851024ab19408b53d5241c844" class="offer-btn" target="_blank" rel="noopener">
-            Assinar agora — R$27,90/mês
-          </a>
+          <!-- CTA principal -->
+          <div style="text-align:center;margin-top:24px;">
+            <div style="background:linear-gradient(135deg,rgba(220,38,38,0.1),rgba(239,68,68,0.05));border:1px solid rgba(220,38,38,0.3);border-radius:12px;padding:16px;margin-bottom:16px;">
+              <p style="color:#fca5a5;font-size:13px;font-weight:700;margin:0 0 4px;letter-spacing:0.5px;">⚠️ ATENÇÃO: QUANDO ESSA PROMOÇÃO ENCERRAR</p>
+              <p style="color:var(--muted-2);font-size:12px;margin:0;">A assinatura retorna automaticamente ao plano mensal — sem essa condição especial.</p>
+            </div>
+            <a href="https://wa.me/5519993586153" class="offer-btn" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#b91c1c,#dc2626);border-color:#dc2626;font-size:17px;padding:18px 32px;display:block;text-align:center;">
+              🔥 QUERO GARANTIR 1 ANO POR R$47,90
+            </a>
+            <p style="color:#f87171;font-size:12px;font-weight:700;margin-top:10px;">⏳ Oferta válida por tempo limitado — não perca!</p>
+          </div>
+
           <div class="cta-trust" style="margin-top:16px;margin-bottom:4px;">
             <span class="cta-trust-item">Acesso imediato</span>
-            <span class="cta-trust-item">Sem burocracia</span>
-            <span class="cta-trust-item">Comece em minutos</span>
+            <span class="cta-trust-item">Pagamento seguro</span>
+            <span class="cta-trust-item">Suporte incluído</span>
           </div>
 
           <div class="offer-payment">
             <span class="payment-badge">
-              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
-              Pix
-            </span>
-            <span class="payment-badge">
-              <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-              Cartão de crédito
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              Pix ou cartão de crédito
             </span>
           </div>
         </div>
@@ -2053,22 +2098,28 @@
 </section>
 
 <!-- CTA FINAL -->
-<section class="cta-final">
+<section class="cta-final" style="position:relative;overflow:hidden;">
+  <div style="background:linear-gradient(90deg,#b91c1c,#dc2626);color:#fff;text-align:center;padding:10px 20px;font-weight:800;font-size:14px;margin-bottom:32px;border-radius:8px;animation:pulse 2s infinite;">
+    🔥 PROMOÇÃO LIMITADA — ENCERRA EM BREVE — DEPOIS VOLTA O PLANO MENSAL 🔥
+  </div>
   <p class="cta-value-text">
-    Por apenas <strong>R$27,90 por mês</strong>, você terá acesso a uma plataforma completa de estudo bíblico,
-    com recursos que levariam anos para reunir de forma individual.
+    Por apenas <strong style="color:#fbbf24;font-size:1.3em;">R$47,90 por 1 ANO COMPLETO</strong>, você terá acesso irrestrito a uma plataforma completa de estudo bíblico profundo — recursos que levariam anos para reunir individualmente.
   </p>
-  <h2>Comece hoje mesmo.</h2>
-  <p style="color:var(--muted-2);font-size:15px;">Acesso imediato após a assinatura. Sem burocracia.</p>
-  <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=e87ef14851024ab19408b53d5241c844" class="btn-cta-gold" target="_blank" rel="noopener">
-    Quero acessar a Bíblia Alpha agora
+  <div style="background:rgba(220,38,38,0.1);border:1px solid rgba(220,38,38,0.3);border-radius:12px;padding:16px 24px;margin:16px auto;max-width:480px;">
+    <p style="color:#fca5a5;font-weight:700;margin:0 0 6px;font-size:15px;">⏳ Essa condição especial não se repete.</p>
+    <p style="color:var(--muted-2);margin:0;font-size:14px;">Quando encerrar, a assinatura retorna ao plano mensal. Garanta agora e economize R$286,90.</p>
+  </div>
+  <h2 style="font-size:28px;margin:16px 0;">Garanta já — antes que encerre!</h2>
+  <p style="color:var(--muted-2);font-size:15px;">Acesso imediato após o pagamento. Sem burocracia.</p>
+  <a href="https://wa.me/5519993586153" class="btn-cta-gold" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#b91c1c,#dc2626);border-color:#dc2626;font-size:18px;padding:20px 40px;">
+    🔥 QUERO 1 ANO POR R$47,90 — GARANTIR AGORA
   </a>
-  <p style="font-size:13px;color:var(--muted-2);margin-top:10px;">Acesso imediato após assinatura</p>
-  <p class="cta-note">R$27,90/mês — cancele quando quiser</p>
+  <p style="font-size:13px;color:#f87171;font-weight:700;margin-top:12px;">⚠️ Oferta válida por tempo limitado. Não perca esta oportunidade única!</p>
+  <p class="cta-note" style="color:#fbbf24;">R$47,90 por 1 ANO — promoção exclusiva e limitada</p>
   <div class="cta-trust" style="margin-top:24px;">
     <span class="cta-trust-item">Acesso imediato após pagamento</span>
-    <span class="cta-trust-item">Sem burocracia</span>
-    <span class="cta-trust-item">Comece em minutos</span>
+    <span class="cta-trust-item">Pagamento seguro</span>
+    <span class="cta-trust-item">Suporte via WhatsApp</span>
   </div>
 </section>
 
