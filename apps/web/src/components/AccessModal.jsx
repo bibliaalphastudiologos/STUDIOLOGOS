@@ -55,7 +55,7 @@ import { X, ArrowRight } from 'lucide-react';
             )}
 
             <a
-              href="https://wa.me/5519993586153"
+              href="https://chat.whatsapp.com/Gt78A68duMBADzzuwnGmbb?mode=gi_t"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary w-full mb-3"
