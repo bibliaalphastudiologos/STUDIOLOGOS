@@ -1451,30 +1451,37 @@
 <section class="hero">
   <div class="hero-ring"></div>
 
-  <div class="hero-eyebrow">
-    <span class="eyebrow-dot"></span>
-    Plataforma de Estudo Bíblico
+  <div class="hero-eyebrow" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;">
+    <span style="display:inline-flex;align-items:center;gap:6px;">
+      <span class="eyebrow-dot"></span>
+      Plataforma de Estudo Bíblico
+    </span>
+    <span style="width:1px;height:14px;background:var(--border);display:inline-block;"></span>
+    <span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--muted-2);">
+      <svg viewBox="0 0 16 16" fill="currentColor" style="width:13px;height:13px;color:#4ade80;"><circle cx="8" cy="8" r="4"/></svg>
+      Centenas de fiéis estudando agora
+    </span>
   </div>
 
   <h1>
-    PARE DE LER A BÍBLIA SEM ENTENDER.<br />
-    <span class="accent">Comece a estudar<br />com profundidade.</span>
+    Entenda a Bíblia com a profundidade<br />
+    <span class="accent">que você sempre buscou.</span>
   </h1>
 
   <p class="hero-sub">
-    Uma plataforma completa com comentários versículo por versículo,
-    ebooks teológicos e ferramentas de estudo — tudo em um só lugar,
-    <em>mesmo sem formação teológica.</em>
+    Comentários versículo por versículo, 100+ ebooks teológicos clássicos e ferramentas de estudo
+    reunidos em um único lugar — <em>sem precisar de formação teológica.</em>
   </p>
 
-  <div style="background:rgba(220,38,38,0.1);border:1px solid rgba(220,38,38,0.4);border-radius:12px;padding:12px 20px;display:inline-block;margin:12px 0;">
-    <div style="color:#f87171;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">🔥 PROMOÇÃO LIMITADA — ENCERRA EM BREVE</div>
+  <div style="background:rgba(220,38,38,0.1);border:1px solid rgba(220,38,38,0.4);border-radius:12px;padding:14px 22px;display:inline-block;margin:12px 0;text-align:center;">
+    <div style="color:#f87171;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">🔥 PROMOÇÃO ENCERRA EM: <span id="countdown-hero" style="font-family:monospace;background:rgba(0,0,0,0.3);padding:2px 7px;border-radius:4px;letter-spacing:1px;">--:--:--</span></div>
     <div class="hero-price" style="margin:0;">
       <span class="price-currency" style="color:#fbbf24;">R$</span>
       <span class="price-amount" style="color:#fbbf24;">47,90</span>
       <span class="price-period" style="color:#fbbf24;">/ 1 ANO</span>
     </div>
-    <div style="color:var(--muted-2);font-size:12px;margin-top:4px;text-decoration:line-through;">Era R$334,80/ano no plano mensal</div>
+    <div style="color:var(--muted-2);font-size:12px;margin-top:3px;text-decoration:line-through;">Era R$334,80/ano no plano mensal</div>
+    <div style="color:#86efac;font-size:12px;font-weight:700;margin-top:4px;">✓ Equivale a apenas R$3,99/mês</div>
   </div>
 
   <div class="hero-actions">
@@ -1489,16 +1496,16 @@
 
   <div class="hero-stats">
     <div class="hero-stat">
-      <div class="hero-stat-value">v. a v.</div>
-      <div class="hero-stat-label">Comentários por versículo</div>
+      <div class="hero-stat-value">31.102</div>
+      <div class="hero-stat-label">Versículos comentados</div>
     </div>
     <div class="hero-stat">
       <div class="hero-stat-value">100+</div>
-      <div class="hero-stat-label">Ebooks teológicos incluídos</div>
+      <div class="hero-stat-label">Ebooks teológicos clássicos</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-stat-value">Contínuo</div>
-      <div class="hero-stat-label">Novo conteúdo adicionado</div>
+      <div class="hero-stat-value">R$3,99</div>
+      <div class="hero-stat-label">Por mês — menos que um café</div>
     </div>
   </div>
 </section>
@@ -2041,7 +2048,7 @@
 
         <!-- Badge topo -->
         <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#b91c1c,#dc2626);color:#fff;font-weight:800;font-size:12px;letter-spacing:1px;padding:5px 20px;border-radius:20px;white-space:nowrap;text-transform:uppercase;">
-          🔥 OFERTA ENCERRA EM BREVE
+          🔥 ENCERRA EM: <span id="countdown-badge" style="font-family:monospace;letter-spacing:2px;">--:--:--</span>
         </div>
 
         <div class="offer-header" style="background:linear-gradient(135deg,rgba(30,10,10,0.95),rgba(40,15,15,0.9));">
@@ -2067,32 +2074,39 @@
         </div>
 
         <div class="offer-body">
-          <ul class="offer-list">
-            <li>
-              <span class="offer-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-              <strong>365 dias</strong> de acesso completo à plataforma
-            </li>
-            <li>
-              <span class="offer-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-              Bíblia comentada versículo por versículo
-            </li>
-            <li>
-              <span class="offer-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-              Biblioteca de ebooks teológicos
-            </li>
-            <li>
-              <span class="offer-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-              Ferramentas exclusivas de estudo
-            </li>
-            <li>
-              <span class="offer-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-              Todas as atualizações inclusas
-            </li>
-            <li>
-              <span class="offer-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-              Suporte via WhatsApp
-            </li>
-          </ul>
+          <div style="margin-bottom:20px;">
+            <div style="font-size:11px;font-weight:700;color:var(--muted-2);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">O que está incluso — valor real de cada item:</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surface);border-radius:10px;border:1px solid var(--border);">
+                <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text);"><span style="color:#4ade80;font-size:11px;font-weight:700;">✓</span> Bíblia comentada versículo a versículo — 66 livros</span>
+                <span style="font-size:12px;color:var(--muted-2);text-decoration:line-through;white-space:nowrap;">R$97</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surface);border-radius:10px;border:1px solid var(--border);">
+                <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text);"><span style="color:#4ade80;font-size:11px;font-weight:700;">✓</span> Biblioteca com 100+ ebooks teológicos clássicos</span>
+                <span style="font-size:12px;color:var(--muted-2);text-decoration:line-through;white-space:nowrap;">R$197</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surface);border-radius:10px;border:1px solid var(--border);">
+                <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text);"><span style="color:#4ade80;font-size:11px;font-weight:700;">✓</span> Ferramentas de estudo e planos de leitura</span>
+                <span style="font-size:12px;color:var(--muted-2);text-decoration:line-through;white-space:nowrap;">R$47</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surface);border-radius:10px;border:1px solid var(--border);">
+                <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text);"><span style="color:#4ade80;font-size:11px;font-weight:700;">✓</span> Atualizações contínuas — novos conteúdos sem custo extra</span>
+                <span style="font-size:12px;color:var(--muted-2);text-decoration:line-through;white-space:nowrap;">R$47</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--surface);border-radius:10px;border:1px solid var(--border);">
+                <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text);"><span style="color:#4ade80;font-size:11px;font-weight:700;">✓</span> Acesso ao grupo de suporte no WhatsApp</span>
+                <span style="font-size:12px;color:var(--muted-2);text-decoration:line-through;white-space:nowrap;">grátis</span>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:rgba(251,191,36,0.08);border-radius:10px;border:1px solid rgba(251,191,36,0.3);margin-top:10px;">
+              <span style="font-size:14px;font-weight:700;color:var(--text);">Valor total separado:</span>
+              <span style="font-size:14px;font-weight:700;color:var(--muted-2);text-decoration:line-through;">R$388,00</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:rgba(220,38,38,0.15);border-radius:10px;border:2px solid rgba(220,38,38,0.4);margin-top:6px;">
+              <span style="font-size:15px;font-weight:800;color:#fff;">Você paga hoje:</span>
+              <span style="font-size:22px;font-weight:800;color:#fbbf24;">R$47,90</span>
+            </div>
+          </div>
 
           <!-- CTA principal -->
           <div style="text-align:center;margin-top:24px;">
@@ -2132,11 +2146,88 @@
   </div>
 </section>
 
+
+<div class="divider"></div>
+
+<!-- COMPARATIVO -->
+<section class="section">
+  <div class="inner">
+    <div class="section-tag">Comparativo</div>
+    <h2 class="section-title">Por que a Bíblia Alpha<br />é a escolha mais inteligente</h2>
+    <p class="section-lead">Compare com as alternativas que você provavelmente já considerou.</p>
+
+    <div style="overflow-x:auto;margin-top:48px;">
+      <table style="width:100%;max-width:860px;margin:0 auto;border-collapse:separate;border-spacing:0;font-size:14px;">
+        <thead>
+          <tr>
+            <th style="padding:14px 16px;text-align:left;color:var(--muted-2);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;border-bottom:1px solid var(--border);">Recurso</th>
+            <th style="padding:14px 16px;text-align:center;background:rgba(220,38,38,0.08);border:2px solid rgba(220,38,38,0.3);border-bottom:none;border-radius:12px 12px 0 0;color:var(--gold);font-weight:800;font-size:13px;">Bíblia Alpha<br/><span style="font-size:11px;color:#f87171;font-weight:600;">R$47,90/ano</span></th>
+            <th style="padding:14px 16px;text-align:center;color:var(--muted-2);font-weight:600;font-size:12px;border-bottom:1px solid var(--border);">Comentários<br/>físicos</th>
+            <th style="padding:14px 16px;text-align:center;color:var(--muted-2);font-weight:600;font-size:12px;border-bottom:1px solid var(--border);">Cursos<br/>online</th>
+            <th style="padding:14px 16px;text-align:center;color:var(--muted-2);font-weight:600;font-size:12px;border-bottom:1px solid var(--border);">Apps<br/>gratuitos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:12px 16px;color:var(--text);border-bottom:1px solid var(--border);">Comentários versículo a versículo</td>
+            <td style="padding:12px 16px;text-align:center;background:rgba(220,38,38,0.05);border-left:2px solid rgba(220,38,38,0.3);border-right:2px solid rgba(220,38,38,0.3);color:#4ade80;font-weight:700;font-size:16px;">✓</td>
+            <td style="padding:12px 16px;text-align:center;color:#4ade80;border-bottom:1px solid var(--border);">✓</td>
+            <td style="padding:12px 16px;text-align:center;color:#f87171;border-bottom:1px solid var(--border);">✗</td>
+            <td style="padding:12px 16px;text-align:center;color:#f87171;border-bottom:1px solid var(--border);">✗</td>
+          </tr>
+          <tr>
+            <td style="padding:12px 16px;color:var(--text);border-bottom:1px solid var(--border);">100+ ebooks integrados</td>
+            <td style="padding:12px 16px;text-align:center;background:rgba(220,38,38,0.05);border-left:2px solid rgba(220,38,38,0.3);border-right:2px solid rgba(220,38,38,0.3);color:#4ade80;font-weight:700;font-size:16px;">✓</td>
+            <td style="padding:12px 16px;text-align:center;color:#f87171;border-bottom:1px solid var(--border);">✗</td>
+            <td style="padding:12px 16px;text-align:center;color:#f87171;border-bottom:1px solid var(--border);">✗</td>
+            <td style="padding:12px 16px;text-align:center;color:#f87171;border-bottom:1px solid var(--border);">✗</td>
+          </tr>
+          <tr>
+            <td style="padding:12px 16px;color:var(--text);border-bottom:1px solid var(--border);">Tudo em uma única plataforma</td>
+            <td style="padding:12px 16px;text-align:center;background:rgba(220,38,38,0.05);border-left:2px solid rgba(220,38,38,0.3);border-right:2px solid rgba(220,38,38,0.3);color:#4ade80;font-weight:700;font-size:16px;">✓</td>
+            <td style="padding:12px 16px;text-align:center;color:#f87171;border-bottom:1px solid var(--border);">✗</td>
+            <td style="padding:12px 16px;text-align:center;color:#f87171;border-bottom:1px solid var(--border);">✗</td>
+            <td style="padding:12px 16px;text-align:center;color:#f87171;border-bottom:1px solid var(--border);">✗</td>
+          </tr>
+          <tr>
+            <td style="padding:12px 16px;color:var(--text);border-bottom:1px solid var(--border);">Atualizações contínuas inclusas</td>
+            <td style="padding:12px 16px;text-align:center;background:rgba(220,38,38,0.05);border-left:2px solid rgba(220,38,38,0.3);border-right:2px solid rgba(220,38,38,0.3);color:#4ade80;font-weight:700;font-size:16px;">✓</td>
+            <td style="padding:12px 16px;text-align:center;color:#f87171;border-bottom:1px solid var(--border);">✗</td>
+            <td style="padding:12px 16px;text-align:center;color:#fbbf24;border-bottom:1px solid var(--border);">~</td>
+            <td style="padding:12px 16px;text-align:center;color:#f87171;border-bottom:1px solid var(--border);">✗</td>
+          </tr>
+          <tr>
+            <td style="padding:12px 16px;color:var(--text);border-bottom:1px solid var(--border);">Garantia de 7 dias</td>
+            <td style="padding:12px 16px;text-align:center;background:rgba(220,38,38,0.05);border-left:2px solid rgba(220,38,38,0.3);border-right:2px solid rgba(220,38,38,0.3);color:#4ade80;font-weight:700;font-size:16px;">✓</td>
+            <td style="padding:12px 16px;text-align:center;color:#f87171;border-bottom:1px solid var(--border);">✗</td>
+            <td style="padding:12px 16px;text-align:center;color:#fbbf24;border-bottom:1px solid var(--border);">~</td>
+            <td style="padding:12px 16px;text-align:center;color:#4ade80;border-bottom:1px solid var(--border);">—</td>
+          </tr>
+          <tr>
+            <td style="padding:12px 16px;color:var(--text);">Custo anual aproximado</td>
+            <td style="padding:12px 16px;text-align:center;background:rgba(220,38,38,0.05);border-left:2px solid rgba(220,38,38,0.3);border-right:2px solid rgba(220,38,38,0.3);border-bottom:2px solid rgba(220,38,38,0.3);border-radius:0 0 0 0;color:#fbbf24;font-weight:800;">R$47,90</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--muted-2);">R$300–600+</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--muted-2);">R$600–2.400+</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--muted-2);">Limitado</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="text-align:center;margin-top:36px;">
+      <a href="https://mpago.la/1cFocZN" class="btn-primary" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#b91c1c,#dc2626);font-size:16px;padding:16px 36px;">
+        🔥 Quero a Bíblia Alpha — R$47,90/ano
+      </a>
+      <p style="color:var(--muted-2);font-size:13px;margin-top:10px;">Garantia de 7 dias · Acesso imediato · Cancele quando quiser</p>
+    </div>
+  </div>
+</section>
+
 <!-- WHATSAPP -->
 <section class="ws-section">
-  <div class="section-tag">Suporte</div>
-  <h2>Ficou com alguma dúvida?</h2>
-  <p>Se você ainda tiver qualquer dúvida antes de assinar, fale diretamente conosco.</p>
+  <div class="section-tag">Comunidade</div>
+  <h2>Junte-se à nossa comunidade</h2>
+  <p>Tire dúvidas, compartilhe descobertas bíblicas e cresça junto com centenas de estudantes da Palavra.</p>
   <a href="https://chat.whatsapp.com/Gt78A68duMBADzzuwnGmbb?mode=gi_t" class="btn-ws" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     Falar no WhatsApp
@@ -2144,21 +2235,98 @@
 </section>
 
 
+
 <!-- ══════════════════════════════════════════
      PASTOR ERICK SILVA — Ministração da Palavra
 ═══════════════════════════════════════════ -->
+<div class="divider"></div>
+
+<section class="section" id="pastor-erick" style="overflow:hidden;">
+  <div class="inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:960px;margin:0 auto;">
+      <!-- FOTO -->
+      <div style="position:relative;display:flex;justify-content:center;align-items:center;">
+        <div style="position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(224,123,84,0.18) 0%,transparent 70%);"></div>
+        <div style="position:absolute;width:300px;height:300px;border-radius:50%;border:1.5px solid rgba(224,123,84,0.25);"></div>
+        <div style="position:relative;width:260px;height:260px;border-radius:50%;overflow:hidden;border:3px solid rgba(224,123,84,0.5);box-shadow:0 0 60px rgba(224,123,84,0.2),0 24px 80px rgba(0,0,0,0.5);">
+          <img src="screenshots/pastor-erick.jpg" alt="Pastor Erick Silva — Teólogo e Pregador do Evangelho" style="width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.style.display='none';this.parentElement.querySelector('.photo-fallback').style.display='flex';" />
+          <div class="photo-fallback" style="display:none;width:100%;height:100%;background:linear-gradient(135deg,#1a1b1e,#2a2b30);align-items:center;justify-content:center;flex-direction:column;gap:8px;">
+            <svg viewBox="0 0 60 60" fill="none" style="width:64px;height:64px;opacity:0.3;"><circle cx="30" cy="22" r="12" stroke="#e07b54" stroke-width="2"/><path d="M6 54c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="#e07b54" stroke-width="2" stroke-linecap="round"/></svg>
+            <span style="color:rgba(224,123,84,0.5);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;">Pastor Erick Silva</span>
+          </div>
+        </div>
+        <div style="position:absolute;bottom:10px;right:10px;background:rgba(15,15,18,0.95);border:1px solid rgba(224,123,84,0.4);border-radius:10px;padding:8px 14px;">
+          <div style="color:var(--gold);font-size:11px;font-weight:700;letter-spacing:0.5px;">✦ Teólogo Licenciado</div>
+          <div style="color:var(--muted-2);font-size:10px;margin-top:1px;">Filosofia &amp; Teologia Sistemática</div>
+        </div>
+      </div>
+      <!-- TEXTO -->
+      <div>
+        <div class="section-tag" style="margin-bottom:16px;">Sobre o Criador</div>
+        <h2 class="section-title" style="font-size:clamp(22px,3vw,34px);line-height:1.25;margin-bottom:8px;">Pastor Erick Silva</h2>
+        <p style="color:var(--gold);font-size:15px;font-weight:600;margin:0 0 20px;letter-spacing:0.3px;">Teólogo · Filósofo · Pregador do Evangelho</p>
+        <p style="color:var(--muted);font-size:16px;line-height:1.75;margin:0 0 24px;">
+          Especialista em <strong style="color:var(--text);">Teologia Sistemática</strong> e <strong style="color:var(--text);">Escatologia Bíblica</strong>, o Pastor Erick é o criador e fundador da <strong style="color:var(--gold);">Bíblia Alpha de Estudo</strong> — fruto de anos de pesquisa, ensino e amor profundo pelas Escrituras. Casado com a Psicóloga <strong style="color:var(--text);">Vania Macedo</strong> e pai da pequena <strong style="color:var(--text);">Ester</strong>.
+        </p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px;">
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;">
+            <div style="color:var(--gold);font-size:18px;margin-bottom:4px;">📖</div>
+            <div style="color:var(--text);font-size:13px;font-weight:700;">Teologia Sistemática</div>
+            <div style="color:var(--muted-2);font-size:12px;margin-top:2px;">Pregações profundas e fundamentadas</div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;">
+            <div style="color:var(--gold);font-size:18px;margin-bottom:4px;">🕊️</div>
+            <div style="color:var(--text);font-size:13px;font-weight:700;">Escatologia Bíblica</div>
+            <div style="color:var(--muted-2);font-size:12px;margin-top:2px;">Os últimos tempos à luz da Palavra</div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;">
+            <div style="color:var(--gold);font-size:18px;margin-bottom:4px;">🎓</div>
+            <div style="color:var(--text);font-size:13px;font-weight:700;">Palestras de Ensino</div>
+            <div style="color:var(--muted-2);font-size:12px;margin-top:2px;">Formação bíblica para igrejas e grupos</div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;">
+            <div style="color:var(--gold);font-size:18px;margin-bottom:4px;">⛪</div>
+            <div style="color:var(--text);font-size:13px;font-weight:700;">Pregações Evangelísticas</div>
+            <div style="color:var(--muted-2);font-size:12px;margin-top:2px;">Com unção, clareza e profundidade</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(224,123,84,0.08),rgba(184,90,46,0.05));border:1px solid rgba(224,123,84,0.25);border-radius:14px;padding:20px 22px;margin-bottom:20px;">
+          <p style="color:var(--gold);font-weight:700;font-size:14px;margin:0 0 6px;letter-spacing:0.5px;">📅 AGENDA ABERTA</p>
+          <p style="color:var(--muted);font-size:14px;margin:0;line-height:1.6;">O Pastor Erick está disponível para <strong style="color:var(--text);">pregações, conferências e palestras de ensino bíblico</strong> em igrejas, retiros e eventos evangelísticos.</p>
+        </div>
+        <a href="https://wa.me/5519993586153?text=Ol%C3%A1%20Pastor%20Erick!%20Gostaria%20de%20convidá-lo%20para%20ministrar%20em%20nossa%20igreja%2Fevento." class="btn-primary" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;font-size:15px;padding:14px 28px;">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Convidar para Ministrar
+        </a>
+        <p style="color:var(--muted-2);font-size:12px;margin-top:10px;">📌 Fundador da Bíblia Alpha · Teólogo Licenciado em Filosofia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 700px) {
+    #pastor-erick .inner > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; gap: 36px !important; }
+    #pastor-erick .inner > div > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr 1fr !important; }
+  }
+</style>
 
 
 <!-- FECHAMENTO DECISÃO -->
 <section class="closing-decision-block" style="background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;">
-  <div style="max-width:620px;margin:0 auto;">
-    <p style="font-family:var(--font-display);font-size:22px;color:var(--text);line-height:1.65;font-style:italic;font-weight:400;margin-bottom:16px;">
-      Você pode continuar estudando da mesma forma…<br />
-      <strong style="color:var(--gold);">ou pode começar hoje a entender a Bíblia com profundidade, clareza e direção.</strong>
+  <div style="max-width:660px;margin:0 auto;">
+    <div style="font-size:32px;margin-bottom:16px;">📖</div>
+    <p style="font-family:var(--font-display);font-size:23px;color:var(--text);line-height:1.65;font-style:italic;font-weight:400;margin-bottom:16px;">
+      Daqui a 12 meses você vai olhar para trás.<br />
+      <strong style="color:var(--gold);">A única diferença entre ter entendido a Bíblia ou não é a decisão que você toma hoje.</strong>
     </p>
-    <p style="font-size:15px;color:var(--muted-2);line-height:1.65;letter-spacing:0.1px;">
-      A decisão é simples: continuar na dúvida — ou avançar com entendimento.
+    <p style="font-size:15px;color:var(--muted-2);line-height:1.65;margin-bottom:20px;">
+      Por menos do que você gasta em um lanche por mês — <strong style="color:var(--text);">R$3,99/mês</strong> — você pode ter acesso a séculos de sabedoria teológica organizada e pronta para te guiar.
     </p>
+    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(251,191,36,0.08);border:1px solid rgba(251,191,36,0.25);border-radius:10px;padding:10px 18px;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" style="width:18px;height:18px;flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      <span style="font-size:13px;color:var(--muted);font-weight:600;">Garantia de 7 dias — sem risco algum para você.</span>
+    </div>
   </div>
 </section>
 
@@ -2174,8 +2342,8 @@
     <p style="color:#fca5a5;font-weight:700;margin:0 0 6px;font-size:15px;">⏳ Essa condição especial não se repete.</p>
     <p style="color:var(--muted-2);margin:0;font-size:14px;">Quando encerrar, a assinatura retorna ao plano mensal. Garanta agora e economize R$286,90.</p>
   </div>
-  <h2 style="font-size:28px;margin:16px 0;">Garanta já — antes que encerre!</h2>
-  <p style="color:var(--muted-2);font-size:15px;">Acesso imediato após o pagamento. Sem burocracia.</p>
+  <h2 style="font-size:28px;margin:16px 0;">Comece hoje. Estude com profundidade.</h2>
+  <p style="color:var(--muted-2);font-size:15px;">Acesso imediato após o pagamento · R$3,99/mês · Cancele quando quiser.</p>
   <a href="https://mpago.la/1cFocZN" class="btn-cta-gold" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#b91c1c,#dc2626);border-color:#dc2626;font-size:18px;padding:20px 40px;">
     🔥 QUERO 1 ANO POR R$47,90 — GARANTIR AGORA
   </a>
@@ -2229,7 +2397,7 @@
     var now = Date.now();
     var diff = deadline - now;
     if (diff <= 0) {
-      ['countdown-timer','countdown-timer-2'].forEach(function(id) {
+      ['countdown-timer','countdown-timer-2','countdown-hero','countdown-badge'].forEach(function(id) {
         var el = document.getElementById(id);
         if (el) el.textContent = '00:00:00';
       });
@@ -2239,7 +2407,7 @@
     var m = Math.floor((diff % 3600000) / 60000);
     var s = Math.floor((diff % 60000) / 1000);
     var txt = pad(h) + ':' + pad(m) + ':' + pad(s);
-    ['countdown-timer','countdown-timer-2'].forEach(function(id) {
+    ['countdown-timer','countdown-timer-2','countdown-hero','countdown-badge'].forEach(function(id) {
       var el = document.getElementById(id);
       if (el) el.textContent = txt;
     });
@@ -2248,5 +2416,35 @@
   tick();
 })();
 </script>
+
+<!-- STICKY MOBILE CTA BAR -->
+<div id="sticky-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:linear-gradient(135deg,#7f1d1d,#b91c1c,#dc2626);padding:12px 16px;box-shadow:0 -4px 20px rgba(0,0,0,0.5);">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:480px;margin:0 auto;">
+    <div>
+      <div style="color:#fbbf24;font-size:13px;font-weight:800;line-height:1.2;">1 ANO por R$47,90</div>
+      <div style="color:rgba(255,255,255,0.7);font-size:11px;">≈ R$3,99/mês · Garantia 7 dias</div>
+    </div>
+    <a href="https://mpago.la/1cFocZN" target="_blank" rel="noopener" style="background:#fbbf24;color:#1a0a00;font-weight:800;font-size:13px;padding:10px 18px;border-radius:8px;text-decoration:none;white-space:nowrap;flex-shrink:0;">
+      🔥 GARANTIR AGORA
+    </a>
+  </div>
+</div>
+<script>
+(function(){
+  var bar = document.getElementById('sticky-cta');
+  if(!bar) return;
+  function checkScroll(){
+    if(window.innerWidth <= 768 && window.scrollY > 500){
+      bar.style.display = 'block';
+    } else {
+      bar.style.display = 'none';
+    }
+  }
+  window.addEventListener('scroll', checkScroll, {passive:true});
+  window.addEventListener('resize', checkScroll, {passive:true});
+  checkScroll();
+})();
+</script>
+
 </body>
 </html>
